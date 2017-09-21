@@ -8,3 +8,5 @@ import Quest from './quest';
 import Register from './register';
 import Settings from './settings';
 import What from './what';
+
+export { Login, Register, Home, What, Quest };
