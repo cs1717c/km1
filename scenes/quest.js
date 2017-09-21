@@ -2,73 +2,32 @@
 
 import React, { Component } from 'react';
 
-import  {
-  StyleSheet,
-  TextInput,
-  TouchableHighlight,
-  AsyncStorage,
-  ActivityIndicatorIOS,
-  Text,
-  View
-} from 'react-native';
- 
-import {
-  BgView
-} from'../components/BgView';
-
-import Api from '../api';
+import { StyleSheet, Text, View } from 'react-native';
 
 class Quest extends Component {
-
-
-  static navigationOptions = {
-    title: 'quest'
- //   header: null
-  
-  };
-  
-  constructor(){
-    super();
-
-    this.state = {
-  
-    }
-  }
-
-
-
-
   render() {
-    const { navigate } = this.props.navigation;      
-    
     return (
-
-      <BgView style={styles.container}>
-        <Text style={styles.heading}>
-          #what
-        </Text>
-      </BgView>
+      <View style={styles.container}>
+        <Text style={styles.heading}>#what</Text>
+      </View>
     );
   }
 }
 //.bind(this)
-
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-  //  backgroundColor: '#F5FCFF',
+    //  backgroundColor: '#F5FCFF',
     padding: 10,
     paddingTop: 80,
     alignSelf: 'stretch',
-    marginLeft:30,
-    marginRight:30
+    marginLeft: 30,
+    marginRight: 30
   },
-  signOutLink: {
-
-  },
+  signOutLink: {},
   input: {
     height: 50,
     marginTop: 10,
@@ -78,10 +37,10 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(255,255,255,0.5)',
     borderRadius: 4,
     color: 'rgba(255,255,255,1)',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'Avenir Next'
   },
   placeholder: {
-    color: 'rgba(255,255,255,1)',
+    color: 'rgba(255,255,255,1)'
   },
   registerButton: {
     height: 50,
@@ -89,7 +48,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     marginTop: 30,
     justifyContent: 'center',
-    borderRadius:4,
+    borderRadius: 4,
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,1)'
   },
@@ -104,7 +63,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0)',
     color: '#FFFFFF',
     marginBottom: 20,
-    marginTop:40
+    marginTop: 40
   },
   error: {
     color: 'red',
@@ -115,4 +74,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Quest
+export default Quest;

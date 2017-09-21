@@ -1,31 +1,22 @@
-
 'use strict';
 
-import React, { Component } from 'react';
+import React from 'react';
 
-import {
-  StyleSheet,
-  TextInput,
-  TouchableHighlight,
-  AsyncStorage,
-  ActivityIndicatorIOS,
-  Text,
-  View,
-  Image
-} from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 
 class BgView extends View {
-
   render() {
     const { style } = this.props;
 
     return (
-      <Image source={require('../img/bg.png')} style={styles.backgroundImage} resizeMode={Image.resizeMode.stretch}>
-        <View style={style}>
-          {super.render()}
-        </View>
+      <Image
+        source={require('../img/bg.png')}
+        style={styles.backgroundImage}
+        resizeMode={Image.resizeMode.stretch}
+      >
+        <View style={style}>{super.render()}</View>
       </Image>
-    )
+    );
   }
 }
 

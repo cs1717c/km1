@@ -1,115 +1,60 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+'use strict';
 
-
-const SERVER_URL = "http://localhost:5000/";
-
+//React
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  StatusBar
-} from 'react-native';
-import { StackNavigator, addNavigationHelpers } from 'react-navigation';
-import { Provider, connect } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
-import  authReducer from './reducers/auth';
-import  menuReducer from './reducers/menu';
-//import logger from 'redux-logger';
+import { AppRegistry, StyleSheet, View } from 'react-native';
 
+//RNRF
+import { Router, Stack, Scene, Drawer } from 'react-native-router-flux';
 
-import { SignedInStack, SignedOutStack, createRootStack } from './router';
+//Kameo
+import { Login, Register, Home, Quest } from './scenes';
 
-import Api from "./api";
+import DrawerContent from './components/DrawerContent';
 
-const AppNavigator =  createRootStack(true);
+import MenuIcon from './img/menu_burger2.png';
 
-const initialState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams('SignedIn'));
-
-// const middleware = () => {
-//   return applyMiddleware(logger())
-// }
-
-
-const navReducer = (state, action) => {
-  const newState = AppNavigator.router.getStateForAction(action, state);
-  return newState || state;
-};
-
-const appReducer = combineReducers({
-  nav: navReducer,
-  menu: menuReducer,
-  auth: authReducer
+const getSceneStyle = () => ({
+  backgroundColor: '#5C2BB7',
+  shadowOpacity: 1,
+  shadowRadius: 3
 });
 
-const store = createStore(appReducer);
-
-const mapStateToProps = (state) => ({
-  nav: state.nav
-});
-
-class App extends React.Component {
-
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     signedIn: false,
-  //     checkedSignIn: false
-  //   };
-  // }
-
-  // componentWillMount() {
-  //   Api.isSignedIn()
-  //     .then(res => this.setState({ signedIn: res, checkedSignIn: true }))
-  //     .catch(err => alert("An error occurred"));
-  // }
-
-  render() {
-    // const { checkedSignIn, signedIn } = this.state;
-
-    // if (!checkedSignIn) {
-    //   return null;
-    // }
-
-
-    return (
-          <AppNavigator navigation={addNavigationHelpers({
-            dispatch: this.props.dispatch,
-            state: this.props.nav
-          })} />
-    );
-
-  }
-}
-
-const AppWithNavigationState = connect(mapStateToProps)(AppNavigator);
-
-class Root extends React.Component {
+class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <AppWithNavigationState />
-      </Provider>
+      <Router getSceneStyle={getSceneStyle}>
+        <Stack key="root">
+          <Scene
+            key="login"
+            component={Login}
+            title="Sign In"
+            navigationBarStyle={styles.navBar}
+            navBarButtonColor="#fff"
+          />
+          <Scene key="register" component={Register} title="Register" />
+          <Drawer
+            hideNavBar
+            key="drawer"
+            contentComponent={DrawerContent}
+            drawerPosition="right"
+            navigationBarStyle={styles.navBar}
+            navBarButtonColor="#fff"
+            title="Kameo"
+          >
+            <Scene key="home" component={Home} title="Home" />
+            <Scene key="quest" component={Quest} title="Quest" />
+          </Drawer>
+        </Stack>
+      </Router>
     );
   }
 }
 
-AppRegistry.registerComponent('Kameo', () => Root);
-
-
-const rootStyle = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    alignSelf: 'stretch',
-    width: null,
-    margin: -1,
-    marginTop: 0
+const styles = StyleSheet.create({
+  navBar: {
+    backgroundColor: '#814EE4'
   }
 });
+
+AppRegistry.registerComponent('Kameo', () => App);

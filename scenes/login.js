@@ -1,130 +1,64 @@
-
 'use strict';
 
 import React, { Component } from 'react';
 
-import {
-  StyleSheet,
-  TextInput,
-  TouchableHighlight,
-  AsyncStorage,
-  ActivityIndicatorIOS,
-  Text,
-  View,
-  Image,
-  StatusBar
-} from 'react-native';
+import { StyleSheet, TextInput, TouchableHighlight, Text, View } from 'react-native';
 
-import Api from '../api';
+import { Actions } from 'react-native-router-flux';
 
-import {
-  BgView
-} from '../components/BgView';
+import { Button } from 'native-base';
 
-
-const TOKEN_KEY = "token";
-const SERVER_URL = "http://localhost:5000/";
+const goToRegister = () => {
+  Actions.register();
+};
 
 class Login extends Component {
-  static navigationOptions = {
-    header: null,
-    title: 'Home',
-  }
-
-
-  constructor() {
-    super();
-
-    this.state = {
-
-    }
-  }
-
-
-
-  async storeToken(accessToken) {
-    try {
-      await AsyncStorage.setItem(TOKEN_KEY, accessToken);
-      this.getToken();
-    }
-    catch (error) {
-      console.log(error);
-    }
-  }
-
-
-  async getToken() {
-    try {
-      let token = await AsyncStorage.getItem(TOKEN_KEY);
-      console.log("token is" + token);
-    }
-    catch (error) {
-      console.log(error);
-    }
-  }
-
-  async onRegisterPressed() {
-
-  }
-
-  async onLoginPressed() {
-    const { navigate } = this.props.navigation;
-    Api.signIn(this.state.email, this.state.password).then(() => navigate("SignedIn"));
-  }
-
   render() {
-    const { navigate } = this.props.navigation;
-
-
     return (
-      <BgView style={styles.container}>
-        <Text style={styles.heading}>
-          Sign in to Kameo
-      </Text>
+      <View style={styles.container}>
+        <Text style={styles.heading}>Sign in to Kameo</Text>
         <TextInput
-          onChangeText={(text) => this.setState({ email: text })}
-          style={styles.input} placeholder="Email" placeholderTextColor='rgba(255,255,255,0.3)'>
-        </TextInput>
+          onChangeText={text => this.setState({ email: text })}
+          style={styles.input}
+          placeholder="Email"
+          placeholderTextColor="rgba(255,255,255,0.3)"
+        />
         <TextInput
-          onChangeText={(text) => this.setState({ password: text })}
-          style={styles.input} placeholder="Password"
-          secureTextEntry={true} placeholderTextColor='rgba(255,255,255,0.3)'>
-        </TextInput>
-        <TouchableHighlight onPress={this.onLoginPressed.bind(this)} style={styles.registerButton}
-          underlayColor='rgba(255,255,255,0.3)'>
-          <Text style={styles.registerButtonText}>
-            Sign In
-          </Text>
+          onChangeText={text => this.setState({ password: text })}
+          style={styles.input}
+          placeholder="Password"
+          secureTextEntry
+          placeholderTextColor="rgba(255,255,255,0.3)"
+        />
+
+        <Button primary>
+          <Text> Primary </Text>
+        </Button>
+
+        <TouchableHighlight
+          style={styles.registerButton}
+          underlayColor="rgba(255,255,255,0.3)"
+          onPress={Actions.home}
+        >
+          <Text style={styles.registerButtonText}>Sign In</Text>
         </TouchableHighlight>
-        <Text style={styles.registerLink} onPress={() =>
-          navigate('Register')
-        }>
+        <Text style={styles.registerLink} onPress={goToRegister}>
           Or Register
-      </Text>
-      </BgView>
+        </Text>
+      </View>
     );
   }
 }
-//.bind(this)
-
 
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    alignSelf: 'stretch',
-    width: null,
-    margin: -1
-  },
   container: {
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    //  backgroundColor: '#F5FCFF',
-    padding: 10,
+    backgroundColor: '#5C2BB7',
+    padding: 40,
     paddingTop: 80,
-    alignSelf: 'stretch',
-    marginLeft: 10,
-    marginRight: 10
+    alignSelf: 'stretch'
   },
   input: {
     height: 50,
@@ -135,10 +69,10 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(255,255,255,0.5)',
     borderRadius: 4,
     color: 'rgba(255,255,255,1)',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'Avenir Next'
   },
   placeholder: {
-    color: 'rgba(255,255,255,1)',
+    color: 'rgba(255,255,255,1)'
   },
   registerButton: {
     height: 50,
@@ -181,4 +115,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Login
+export default Login;
