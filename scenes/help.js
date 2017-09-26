@@ -4,55 +4,23 @@ import React, { Component } from 'react';
 
 import  {
   StyleSheet,
-  TextInput,
-  TouchableHighlight,
-  AsyncStorage,
-  ActivityIndicatorIOS,
   Text,
   View
 } from 'react-native';
  
-import {
-  BgView
-} from'../components/BgView';
-
-import Api from '../api';
 
 class Help extends Component {
 
-
-  static navigationOptions = {
-    title: 'help'
- //   header: null
-  
-  };
-  
-  constructor(){
-    super();
-
-    this.state = {
-  
-    }
-  }
-
-
-
-
-  render() {
-    const { navigate } = this.props.navigation;      
-    
+  render() {    
     return (
-
-      <BgView style={styles.container}>
+      <View style={styles.container}>
         <Text style={styles.heading}>
           Help
         </Text>
-      </BgView>
+      </View>
     );
   }
 }
-//.bind(this)
-
 
 const styles = StyleSheet.create({
   container: {

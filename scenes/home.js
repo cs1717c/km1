@@ -2,9 +2,11 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
+
+import { Heading, TextInput, Title, Button, Text } from '@shoutem/ui';
 
 class Home extends Component {
   static navigationOptions = {
@@ -16,16 +18,15 @@ class Home extends Component {
       <View style={styles.container}>
         <View style={styles.profileBlock}>
           <View style={styles.profileLeft}>
-            <Text
-              style={styles.helloHeading}
+            <Title
               onPress={() => {
                 Actions.quest();
               }}
             >
               Hello, John
-            </Text>
-            <Text style={styles.profileInfo}>27 - Male - London</Text>
-            <Text style={styles.profileCopy}>What do you want to do today?</Text>
+            </Title>
+            <Text>27 - Male - London</Text>
+            <Text>What do you want to do today?</Text>
           </View>
           <View style={styles.profileRight}>
             <Image
@@ -36,7 +37,69 @@ class Home extends Component {
           </View>
         </View>
 
-        <Text style={styles.heading}>Welcome to Kameo!</Text>
+        <View style={styles.mainBlock}>
+          <View style={styles.mainBlockHeadingRow}>
+            <View style={styles.mainBlockHeadingRowLeft}>
+              <Title>Go Out</Title>
+            </View>
+            <View style={styles.mainBlockHeadingRowRight}>
+              <Button styleName="full-width" style={styles.mainBtn}>
+                <Text>Go Out</Text>
+              </Button>
+            </View>
+          </View>
+          <View style={styles.mainBlockSubRow}>
+            <Text>Join over 2000 other Kameo users out in London today.</Text>
+          </View>
+        </View>
+
+        <View style={styles.mainBlock}>
+          <View style={styles.mainBlockHeadingRow}>
+            <View style={styles.mainBlockHeadingRowLeft}>
+              <Title>Meet Here</Title>
+            </View>
+            <View style={styles.mainBlockHeadingRowRight}>
+              <Button styleName="full-width" style={styles.mainBtn}>
+                <Text>Meet Here</Text>
+              </Button>
+            </View>
+          </View>
+          <View style={styles.mainBlockSubRow}>
+            <Text>Invite other Kameo users to join you where you are.</Text>
+          </View>
+        </View>
+
+        <View style={styles.mainBlock}>
+          <View style={styles.mainBlockHeadingRow}>
+            <View style={styles.mainBlockHeadingRowLeft}>
+              <Title>Quest</Title>
+            </View>
+            <View style={styles.mainBlockHeadingRowRight}>
+              <Button styleName="full-width" style={styles.mainBtn}>
+                <Text>Quest</Text>
+              </Button>
+            </View>
+          </View>
+          <View style={styles.mainBlockSubRow}>
+            <Text>The adventure starts here...</Text>
+          </View>
+        </View>
+
+        <View style={styles.mainBlock}>
+          <View style={styles.mainBlockHeadingRow}>
+            <View style={styles.mainBlockHeadingRowLeft}>
+              <Title>#what</Title>
+            </View>
+            <View style={styles.mainBlockHeadingRowRight}>
+              <Button styleName="full-width" style={styles.mainBtn}>
+                <Text>#what</Text>
+              </Button>
+            </View>
+          </View>
+          <View style={styles.mainBlockSubRow}>
+            <Text>Let us know what you're into </Text>
+          </View>
+        </View>
       </View>
     );
   }
@@ -44,17 +107,12 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
   profileBlock: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    padding: 10,
+    paddingTop: 0
   },
   helloHeading: {
-    color: '#fff',
     fontSize: 18
-  },
-  profileInfo: {
-    color: '#fff'
-  },
-  profileCopy: {
-    color: '#fff'
   },
   profileLeft: {
     flexGrow: 1,
@@ -68,64 +126,42 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     //  backgroundColor: '#F5FCFF',
     padding: 0,
-    paddingTop: 55,
+    paddingTop: 20,
     alignSelf: 'stretch',
     paddingLeft: 8,
     paddingRight: 8
     //width:'',
   },
   profileImage: {
-    width: 100,
-    height: 100,
+    width: 110,
+    height: 110,
     borderWidth: 1,
     borderColor: '#fff',
     borderRadius: 4,
     opacity: 0.8
   },
-  signOutLink: {},
-  input: {
-    height: 50,
-    marginTop: 10,
-    padding: 8,
-    fontSize: 18,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.5)',
-    borderRadius: 4,
-    color: 'rgba(255,255,255,1)',
-    fontFamily: 'Avenir Next'
+  mainBlock: {
+    flexDirection: 'column',
+    padding: 10,
+    paddingTop: 30
   },
-  placeholder: {
-    color: 'rgba(255,255,255,1)'
+  mainBlockHeadingRow: {
+    flexDirection: 'row',
+    padding: 0
   },
-  registerButton: {
-    height: 50,
-    backgroundColor: 'rgba(255,255,255,0.15)',
-    alignSelf: 'stretch',
-    marginTop: 30,
-    justifyContent: 'center',
-    borderRadius: 4,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,1)'
+  mainBlockHeadingRowLeft: {
+    flexDirection: 'row',
+    padding: 0,
+    flexGrow: 1
   },
-  registerButtonText: {
-    fontSize: 22,
-    color: '#FFFFFF',
-    alignSelf: 'center'
+  mainBlockHeadingRowRight: {
+    padding: 0,
+    width: 110
   },
-  heading: {
-    fontSize: 24,
-    fontWeight: '200',
-    backgroundColor: 'rgba(0,0,0,0)',
-    color: '#FFFFFF',
-    marginBottom: 20,
-    marginTop: 40
-  },
-  error: {
-    color: 'red',
-    paddingTop: 10
-  },
-  loader: {
-    marginTop: 20
+  mainBlockSubRow: {
+    flexDirection: 'row',
+    padding: 0,
+    paddingTop: 20
   }
 });
 
