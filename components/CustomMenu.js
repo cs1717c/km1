@@ -22,7 +22,7 @@ import MenuItems from './MenuItems';
 
 const CustomMenu = (props) => (
     <View style={styles.drawer}>
-        <Image source={require('../img/bg.png')} style={styles.backgroundImage} resizeMode={Image.resizeMode.cover} >
+        <Image source={require('../img/bg2.png')} style={styles.backgroundImage} resizeMode={Image.resizeMode.cover} >
             <View style={styles.container}>
             <MenuItems {...props} />
             </View>

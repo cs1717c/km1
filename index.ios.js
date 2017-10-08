@@ -30,7 +30,7 @@ import {
 import DrawerContent from './components/DrawerContent';
 
 const getSceneStyle = () => ({
-   backgroundColor: 'rgba(0,0,0,0.1)',
+  //  backgroundColor: 'rgba(0,0,0,0.1)',
   shadowOpacity: 1,
   shadowRadius: 3
 });

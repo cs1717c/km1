@@ -1,53 +1,36 @@
 
 'use strict';
 
-import React, { Component } from 'react';
+import React from 'react';
 
 import {
-  StyleSheet,
-  TextInput,
-  TouchableHighlight,
-  AsyncStorage,
-  ActivityIndicatorIOS,
-  Text,
+  Image,
   View,
-  Image
-} from 'react-native';
+} from '@shoutem/ui';
 
 class BgView extends View {
 
   render() {
-    const { style } = this.props;
+    const { style, isDark } = this.props;
 
-    return (
-      <Image source={require('../img/bg.png')} style={styles.backgroundImage} resizeMode={Image.resizeMode.stretch}>
+    if (isDark) {
+
+      return (
+      <Image source={require('../img/home_bg.png')} styleName='featured'>
         <View style={style}>
           {super.render()}
         </View>
-      </Image>
-    )
+      </Image>);
+    } else {
+      return  (
+      <Image source={require('../img/home_bg.png')} styleName='featured'>
+        <View style={style}>
+          {super.render()}
+        </View>
+      </Image>);
+    }
   }
 }
 
-const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    alignSelf: 'stretch',
-    width: null,
-    margin: -1,
-    marginTop: -70
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    //  backgroundColor: '#F5FCFF',
-    padding: 10,
-    paddingTop: 80,
-    alignSelf: 'stretch',
-    marginLeft: 30,
-    marginRight: 30
-  }
-});
 
-export { BgView };
+export default BgView;

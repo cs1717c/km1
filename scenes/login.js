@@ -6,6 +6,8 @@ import { StyleSheet, View, StatusBar } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
 
+import { BgView } from '../components';
+
 import { Heading, TextInput, Title, Button, Text } from '@shoutem/ui';
 
 const goToRegister = () => {
@@ -15,17 +17,17 @@ const goToRegister = () => {
 class Login extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <BgView isHome>
         <StatusBar backgroundColor="blue" barStyle="light-content" hidden />
 
-        <Heading styleName="md-gutter">Welcome to Kameo</Heading>
-        <Title styleName="md-gutter">Sign In</Title>
+        <Heading styleName="md-gutter sign-in-header">Sign in to Kameo</Heading>
 
         <TextInput
           onChangeText={text => this.setState({ email: text })}
           styleName="md-gutter"
           placeholder="Email"
         />
+
         <TextInput
           onChangeText={text => this.setState({ password: text })}
           styleName="md-gutter"
@@ -33,6 +35,9 @@ class Login extends Component {
           secureTextEntry
         />
 
+        <Text>Don't have an account yet?</Text>
+        <Text>Register</Text>
+        
         <Button onPress={Actions.home} styleName="lg-gutter">
           <Text>Sign In</Text>
         </Button>
@@ -40,7 +45,7 @@ class Login extends Component {
         <Text styleName="" onPress={goToRegister}>
           Or Register
         </Text>
-      </View>
+      </BgView>
     );
   }
 }
