@@ -2,75 +2,128 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Image, Text } from 'react-native';
+
+import { Actions } from 'react-native-router-flux';
+
+import { BgView, KmText, KmButton } from 'Kameo/components';
+
+import tags from 'Kameo/utilities/tags';
 
 class GoWhat extends Component {
   render() {
+    const tagText = [];
+    for (const tag of tags.slice(0,20)) {
+      tagText.push(<KmText style={styles.tag} key={tag}>#{tag}</KmText>);
+    }
+
     return (
-      <View style={styles.container}>
-        <Text style={styles.heading}>2. What</Text>
-      </View>
+      <BgView style={styles.page}>
+
+        <KmText style={styles.header}>2. #what</KmText>
+
+        <KmText style={styles.subHeader}>#what are you into?</KmText>
+        <View style={[styles.section, styles.tagSection]}>
+          <View style={styles.tagBody}>
+            {tagText}
+          </View>
+          <KmText style={[styles.tag, { marginLeft: 5 }]}>... and 25 more</KmText>
+          <KmButton style={styles.changeBtn} onPress={Actions.what}>change</KmButton>
+        </View>
+
+        <View style={[styles.section, styles.changeSection]}>
+        </View>
+
+        <View style={styles.footer}>
+          <KmText>2/4</KmText>
+          <KmButton style={styles.next} onPress={Actions.goWhere}>next</KmButton>
+        </View>
+
+      </BgView>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    //  backgroundColor: '#F5FCFF',
-    padding: 10,
-    paddingTop: 80,
-    alignSelf: 'stretch',
-    marginLeft: 30,
-    marginRight: 30
+const styles = {
+  page: { 
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    flex:1,
+   // borderWidth: 1,
+    borderColor: 'red',
+    justifyContent: 'space-between'
   },
-  signOutLink: {},
-  input: {
-    height: 50,
-    marginTop: 10,
-    padding: 8,
-    fontSize: 18,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.5)',
-    borderRadius: 4,
-    color: 'rgba(255,255,255,1)',
-    fontFamily: 'Avenir Next'
-  },
-  placeholder: {
-    color: 'rgba(255,255,255,1)'
-  },
-  registerButton: {
-    height: 50,
-    backgroundColor: 'rgba(255,255,255,0.15)',
-    alignSelf: 'stretch',
-    marginTop: 30,
-    justifyContent: 'center',
-    borderRadius: 4,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,1)'
-  },
-  registerButtonText: {
-    fontSize: 22,
-    color: '#FFFFFF',
-    alignSelf: 'center'
-  },
-  heading: {
-    fontSize: 24,
-    fontWeight: '200',
-    backgroundColor: 'rgba(0,0,0,0)',
-    color: '#FFFFFF',
-    marginBottom: 20,
+
+  header: {
+    fontSize: 36,
     marginTop: 40
   },
-  error: {
-    color: 'red',
-    paddingTop: 10
+
+  section: {
+    marginTop: 0,
+   // borderWidth: 1,
+    borderColor: 'blue'
   },
-  loader: {
-    marginTop: 20
-  }
-});
+
+  tagSection: {
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    margin: -10,
+    padding: 10,
+    borderRadius: 8,
+  },
+
+  subHeader: {
+    fontSize: 20,
+    fontWeight: '400',
+    marginTop: 30,
+  },
+
+  sectionBody: {
+    flexDirection: 'row',
+    marginTop: 10,
+    borderColor: 'green',
+  //  borderWidth: 1,
+    justifyContent: 'space-between',
+    width: '100%'
+  },
+
+  sectionBodyBtn: {
+    width: '46%',
+  },
+
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 80
+  },
+
+  next: {
+    paddingVertical: 8,
+    paddingHorizontal: 40
+  },
+
+  tagBody: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    margin: 5
+  },
+
+  tag: {
+    paddingRight: 7,
+    paddingVertical: 7,
+    fontWeight: '400',
+    fontSize: 14,
+    color: 'rgba(255,255,255,0.7)'
+  },
+
+  changeBtn: {
+    width: 110,
+    alignSelf: 'flex-end',
+    marginTop: 40
+  },
+
+};
 
 export default GoWhat;

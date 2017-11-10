@@ -2,117 +2,130 @@
 
 import React, { Component } from 'react';
 
-import  {
-  StyleSheet,
-  TextInput,
-  TouchableHighlight,
-  AsyncStorage,
-  ActivityIndicatorIOS,
-  Text,
-  View
-} from 'react-native';
- 
-import {
-  BgView
-} from'../components/BgView';
+import { StyleSheet, View, Image, Text, ScrollView } from 'react-native';
 
-import Api from '../api';
+import { Actions } from 'react-native-router-flux';
+
+import { BgView, KmText, KmInput, KmButton } from 'Kameo/components';
+
+import tags from 'Kameo/utilities/tags';
+
+import LinearGradient from 'react-native-linear-gradient';
+
 
 class What extends Component {
-
-
-  static navigationOptions = {
-    title: '#what'
- //   header: null
-  
-  };
-  
-  constructor(){
-    super();
-
-    this.state = {
-  
-    }
-  }
-
-
-
-
   render() {
-    const { navigate } = this.props.navigation;      
-    
-    return (
+    const tagRows = [];
+    for (const tag of tags.slice(0,20)) {
+      tagRows.push(
+        <View key={tag} style={styles.tagRow}>
+          <KmText style={styles.tag}>#{tag}</KmText>
+          <KmText style={styles.subscriberCount}>100k</KmText>
+        </View>);
+    }
 
-      <BgView style={styles.container}>
-        <Text style={styles.heading}>
-          #what
-        </Text>
+    return (
+      <BgView style={styles.page}>
+        <KmInput 
+          style={styles.search}
+          inputStyle={styles.searchInput}
+          placeholder='#what are you into?'
+          placeholderTextColor="rgba(255,255,255,1)"
+          autoCapitalize="none"
+        />
+        
+
+        <ScrollView style={styles.tagScroller}>
+          {tagRows}
+          <View style={styles.tagSpacer} />
+        </ScrollView>
+        <Image source={require('Kameo/img/gradient2.png')} style={styles.scrollGradient} pointerEvents={'none'} />
+        <View style={styles.footer}>
+        <KmButton style={styles.next}>only my choices</KmButton>
+          <KmButton style={styles.next} onPress={Actions.goWhere}>done</KmButton>
+        </View>
+
       </BgView>
     );
   }
 }
-//.bind(this)
 
-
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  linearGradient: {
     flex: 1,
-    justifyContent: 'flex-start',
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5,
+    height: 20,
+    borderWidth: 1,
+    borderColor: 'red'
+  },
+
+  scrollGradient: {
+
+  },
+
+  page: {
+    padding: 0,
+    paddingTop: 80
+  },
+
+  header: {
+    marginBottom: 10,
+    marginLeft: 10
+  },
+
+  search: {
+    paddingLeft: 20,
+    borderColor: 'rgba(0,0,0,1)',
+    paddingBottom: 20,
+  },
+
+  searchInput: {
+    fontSize: 24
+  },
+
+  tagScroller: {
+    //  borderWidth: 1,
+    borderColor: 'red',
+    marginLeft: 0,
+    marginRight: 0,
+    padding: 20,
+    marginTop: 0,
+    marginBottom: -120,
+    backgroundColor: 'rgba(0,0,0,0.2)'
+  },
+
+  scrollGradient: {
+
+  },
+
+  tagRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-  //  backgroundColor: '#F5FCFF',
-    padding: 10,
-    paddingTop: 80,
-    alignSelf: 'stretch',
-    marginLeft:30,
-    marginRight:30
+    marginVertical: 10,
   },
-  signOutLink: {
 
+  tagSpacer: {
+    height: 90,
   },
-  input: {
-    height: 50,
-    marginTop: 10,
-    padding: 8,
-    fontSize: 18,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.5)',
-    borderRadius: 4,
-    color: 'rgba(255,255,255,1)',
-    fontFamily: 'Avenir Next',
-  },
-  placeholder: {
-    color: 'rgba(255,255,255,1)',
-  },
-  registerButton: {
-    height: 50,
-    backgroundColor: 'rgba(255,255,255,0.15)',
-    alignSelf: 'stretch',
-    marginTop: 30,
-    justifyContent: 'center',
-    borderRadius:4,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,1)'
-  },
-  registerButtonText: {
-    fontSize: 22,
-    color: '#FFFFFF',
-    alignSelf: 'center'
-  },
-  heading: {
+
+  tag: {
     fontSize: 24,
-    fontWeight: '200',
-    backgroundColor: 'rgba(0,0,0,0)',
-    color: '#FFFFFF',
-    marginBottom: 20,
-    marginTop:40
+    color: 'rgba(255,255,255,0.5)'
   },
-  error: {
-    color: 'red',
-    paddingTop: 10
-  },
-  loader: {
-    marginTop: 20
-  }
-});
 
-export default What
+  subscriberCount: {
+    marginTop: 2, 
+    color: 'rgba(255,255,255,0.75)'
+  },
+
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 8
+  }
+};
+
+export default What;

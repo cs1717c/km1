@@ -1,36 +1,42 @@
-
 'use strict';
 
-import React from 'react';
+import React, { Component } from 'react';
 
 import {
+  StyleSheet,
   Image,
-  View,
-} from '@shoutem/ui';
+  View
+} from 'react-native';
 
-class BgView extends View {
 
+class BgView extends Component {
   render() {
-    const { style, isDark } = this.props;
+    const { isDark, isMenu } = this.props;
 
     if (isDark) {
-
       return (
-      <Image source={require('../img/home_bg.png')} styleName='featured'>
-        <View style={style}>
-          {super.render()}
-        </View>
+      <Image source={require('Kameo/img/home_bg.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
+      {this.props.children}
       </Image>);
     } else {
       return  (
-      <Image source={require('../img/home_bg.png')} styleName='featured'>
-        <View style={style}>
-          {super.render()}
-        </View>
-      </Image>);
+      <Image source={require('Kameo/img/bg2.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.stretch}>
+      {this.props.children}
+      </Image>); 
     }
   }
 }
 
+const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    alignSelf: 'stretch',
+    width: null,
+    margin: 0,
+    marginTop: -60,
+    paddingTop: 65,
+    backgroundColor: '#1d1a28'
+  },
+});
 
 export default BgView;

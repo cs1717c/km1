@@ -2,117 +2,209 @@
 
 import React, { Component } from 'react';
 
-import  {
-  StyleSheet,
-  TextInput,
-  TouchableHighlight,
-  AsyncStorage,
-  ActivityIndicatorIOS,
-  Text,
-  View
-} from 'react-native';
- 
-import {
-  BgView
-} from'../components/BgView';
+import { StyleSheet, View, Image, Text, ScrollView } from 'react-native';
 
-import Api from '../api';
+import { Actions } from 'react-native-router-flux';
+
+import { BgView, KmText, KmInput, KmButton } from 'Kameo/components';
+
+import places from 'Kameo/utilities/places';
 
 class Places extends Component {
-
-
-  static navigationOptions = {
-    title: 'places'
- //   header: null
-  
-  };
-  
-  constructor(){
-    super();
-
-    this.state = {
-  
-    }
-  }
-
-
-
-
   render() {
-    const { navigate } = this.props.navigation;      
-    
-    return (
+    const placeRows = [];
+    for (const place of places.slice(0,20)) {
+      const tags = "#"+place.tags.join(" #");
 
-      <BgView style={styles.container}>
-        <Text style={styles.heading}>
-          Places
-        </Text>
+      const rating = place.rating;
+
+      const stars = [];
+
+      for (let i = 0; i < rating; i++) {
+        stars.push(<Image source={require('Kameo/img/star-active2.png')} style={styles.placeStar} />);
+      }
+
+      for (let i = 0; i < 5-rating; i++) {
+        stars.push(<Image source={require('Kameo/img/star2.png')} style={[styles.placeStar]} />);
+      }
+
+      placeRows.push(
+        <View key={place.placeName} style={styles.placeRowContainer}>
+          <View style={styles.placeTopRow}>
+            <KmText style={styles.placeName}>{place.name}</KmText>
+            <KmText style={styles.placeArea}>{place.area}</KmText>
+          </View>
+          <KmText style={styles.placeInfo}>({place.type[0]}) 20 min drive, 10 min walk</KmText>
+          <View style={styles.placeStarsContainer}>{stars}</View>
+
+          <View style={styles.placeBottomRow}>
+            <KmText style={styles.placeTags}>{tags}</KmText>
+            <KmButton style={styles.placeInfoButton}>...</KmButton>
+          </View>
+        </View>);
+    }
+
+    return (
+      <BgView style={styles.page}>
+        <KmInput 
+          style={styles.search}
+          inputStyle={styles.searchInput}
+          placeholder='Search places'
+          placeholderTextColor="rgba(255,255,255,1)"
+          autoCapitalize="none"
+        />
+        
+
+        <ScrollView style={styles.placeScroller}>
+          {placeRows}
+          <View style={styles.placeSpacer} />
+        </ScrollView>
+        <Image source={require('Kameo/img/gradient2.png')} style={styles.scrollGradient} pointerEvents={'none'} />
+        <View style={styles.footer}>
+        <KmButton style={styles.next}>only my choices</KmButton>
+          <KmButton style={styles.next} onPress={Actions.goWhere}>done</KmButton>
+        </View>
+
       </BgView>
     );
   }
 }
-//.bind(this)
 
-
-const styles = StyleSheet.create({
-  container: {
+const styles = {
+  linearGradient: {
     flex: 1,
-    justifyContent: 'flex-start',
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5,
+    height: 20,
+    borderWidth: 1,
+    borderColor: 'red'
+  },
+
+  scrollGradient: {
+
+  },
+
+  page: {
+    padding: 0,
+    paddingTop: 80
+  },
+
+  header: {
+    marginBottom: 10,
+    marginLeft: 10
+  },
+
+  search: {
+    paddingLeft: 20,
+    borderColor: 'rgba(0,0,0,1)',
+    paddingBottom: 20,
+  },
+
+  searchInput: {
+    fontSize: 24
+  },
+
+  placeScroller: {
+    //  borderWidth: 1,
+    borderColor: 'red',
+    marginLeft: 0,
+    marginRight: 0,
+    padding: 20,
+    marginTop: 0,
+    marginBottom: -120,
+    backgroundColor: 'rgba(0,0,0,0.2)'
+  },
+
+  scrollGradient: {
+
+  },
+
+  placeRowContainer: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     alignItems: 'center',
-  //  backgroundColor: '#F5FCFF',
-    padding: 10,
-    paddingTop: 80,
-    alignSelf: 'stretch',
-    marginLeft:30,
-    marginRight:30
+    marginVertical: 10,
+    backgroundColor: 'rgba(255,200,255,0.1)',
+    borderRadius: 8,
+    padding: 12,
   },
-  signOutLink: {
 
+  placeTopRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    // borderWidth: 1,
+    // borderColor: 'red',
+    flex: 1,
+    width: '100%'
   },
-  input: {
-    height: 50,
-    marginTop: 10,
-    padding: 8,
+
+  placeBottomRow: { 
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+  },
+
+  placeTags: { 
+  },  
+
+  placeSpacer: {
+    height: 90,
+  },
+
+  placeName: {
+    textAlign: 'left',
+    // alignSelf: 'flex-start',
+    fontWeight: '500',
     fontSize: 18,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.5)',
-    borderRadius: 4,
-    color: 'rgba(255,255,255,1)',
-    fontFamily: 'Avenir Next',
   },
-  placeholder: {
-    color: 'rgba(255,255,255,1)',
-  },
-  registerButton: {
-    height: 50,
-    backgroundColor: 'rgba(255,255,255,0.15)',
-    alignSelf: 'stretch',
-    marginTop: 30,
-    justifyContent: 'center',
-    borderRadius:4,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,1)'
-  },
-  registerButtonText: {
-    fontSize: 22,
-    color: '#FFFFFF',
-    alignSelf: 'center'
-  },
-  heading: {
-    fontSize: 24,
-    fontWeight: '200',
-    backgroundColor: 'rgba(0,0,0,0)',
-    color: '#FFFFFF',
-    marginBottom: 20,
-    marginTop:40
-  },
-  error: {
-    color: 'red',
-    paddingTop: 10
-  },
-  loader: {
-    marginTop: 20
-  }
-});
 
-export default Places
+  placeArea: {
+    // alignSelf: 'flex-end',
+    fontSize: 14,
+  },
+
+  placeInfo: {
+    width: '100%',
+    textAlign: 'left',
+    fontSize: 14,
+    marginTop: 5
+  },
+
+  placeStarsContainer: {
+    flexDirection: 'row',
+    marginTop: 5,
+    width: '100%'
+  },
+
+  placeStar: {
+    width: 16,
+    height: 16,
+    margin: 3,
+  },
+
+  placeTags: {
+    fontSize: 13,
+    width: '80%',
+  },
+
+  place: {
+    fontSize: 24,
+    color: 'rgba(255,255,255,0.5)'
+  },
+
+  subscriberCount: {
+    marginTop: 2, 
+    color: 'rgba(255,255,255,0.75)'
+  },
+
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 8
+  }
+};
+
+export default Places;

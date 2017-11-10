@@ -13,6 +13,8 @@ import Quest from './quest';
 import Register from './register';
 import Settings from './settings';
 import What from './what';
+import Meet from './meet';
+import EnRoute from './enroute';
 
 export {
   Connect,
@@ -29,5 +31,7 @@ export {
   GoWhat,
   GoWhere,
   GoWhen,
-  GoFinal
+  GoFinal,
+  Meet,
+  EnRoute
 };
