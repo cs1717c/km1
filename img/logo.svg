@@ -1,0 +1,21 @@
+<svg width="176px" height="49px" viewBox="0 0 176 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <text id="text-1" font-family="FuturaPT-Book, Futura PT" font-size="48" font-weight="300" line-spacing="59" fill="#FFFFFF">
+            <tspan x="28" y="66.93">K</tspan>
+            <tspan x="52.73" y="64" font-size="55">ameo.</tspan>
+        </text>
+        <filter x="-12.4%" y="-56.6%" width="124.8%" height="213.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.201115263 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="1">
+        <g id="#what" transform="translate(-28.000000, -17.000000)" fill="#FFFFFF">
+            <g id="Kameo.">
+                <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                <use xlink:href="#text-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
