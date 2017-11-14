@@ -20,7 +20,7 @@ class BgView extends Component {
       </Image>);
     } else {
       return  (
-      <Image source={require('Kameo/img/bg2.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.stretch}>
+      <Image source={require('Kameo/img/main_bg.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.stretch}>
       {this.props.children}
       </Image>); 
     }

@@ -6,36 +6,37 @@ import { StyleSheet, View, Image, Text, TouchableHighlight, TouchableWithoutFeed
 
 import { Actions } from 'react-native-router-flux';
 
-import {BgView, KmText} from 'Kameo/components';
+import { BgView, KmText } from 'Kameo/components';
 
 
-
-const {bp, vw, vh} = require('react-native-relative-units')(375);
+const { bp, vw, vh } = require('react-native-relative-units')(375);
 
 class Home extends Component {
   render() {
     return (
       <BgView style={styles.container}>
         <View style={styles.profileContainer}>
-        <Image source={require('Kameo/img/profiles/01.jpg')} style={styles.profile} />
-        <View style={styles.profileInfo}>
-        <KmText style={styles.profileHeader}>Hello, John</KmText>
-        <KmText style={styles.profileSubHeader}>27 - Male - London</KmText>
+          <Image source={require('Kameo/img/profiles/01.jpg')} style={styles.profile} />
+          <View style={styles.profileInfo}>
+            <KmText style={styles.profileHeader}>Hello, John</KmText>
+            <KmText style={styles.profileSubHeader}>27 - Male - London</KmText>
+          </View>
         </View>
-        </View>
-        <View style={styles.linkContainer}>
-          <TouchableWithoutFeedback onPress={Actions.goWho}>
-            <KmText style={styles.link}>go out</KmText>
-          </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={Actions.meet}>
-          <KmText style={styles.link}>meet here</KmText>
-          </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={Actions.enRoute}>
-            <KmText style={styles.link}>quest</KmText>
-          </TouchableWithoutFeedback>
+        <View style={styles.linksContainer}>
+          <View style={styles.leftLinkContainer}>
           <TouchableWithoutFeedback onPress={Actions.what}>
-            <KmText style={styles.link}>#what</KmText>
-          </TouchableWithoutFeedback>
+              <KmText style={styles.whatLink}>#what</KmText>
+            </TouchableWithoutFeedback>
+          </View>  
+
+          <View style={styles.rightLinkContainer}>
+          <TouchableWithoutFeedback onPress={Actions.meet}>
+            <KmText style={styles.meetHereLink}>meet here</KmText>
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={Actions.goWho}>
+              <KmText style={styles.goLink}>go</KmText>
+            </TouchableWithoutFeedback>
+          </View>
         </View>
       </BgView>
     );
@@ -83,9 +84,20 @@ const styles = {
    borderRadius: 8,
   // padding: 20,
   },
-  linkContainer: {
+  linksContainer: {
     marginTop: 20,
-    marginLeft: 45,
+    marginLeft: 0,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginRight: 0
+  },
+  leftLinkContainer: {
+    marginTop: 120,
+  },
+  whatLink: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'white',
+    // borderWidth: 1,
   }
 };
 
