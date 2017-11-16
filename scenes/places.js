@@ -59,7 +59,7 @@ class Places extends Component {
           {placeRows}
           <View style={styles.placeSpacer} />
         </ScrollView>
-        <Image source={require('Kameo/img/gradient2.png')} style={styles.scrollGradient} pointerEvents={'none'} />
+        <Image source={require('Kameo/img/gradient4.png')} style={styles.scrollGradient} pointerEvents={'none'} />
         <View style={styles.footer}>
         <KmButton style={styles.next}>only my choices</KmButton>
           <KmButton style={styles.next} onPress={Actions.goWhere}>done</KmButton>

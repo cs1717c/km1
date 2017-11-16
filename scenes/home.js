@@ -23,20 +23,31 @@ class Home extends Component {
           </View>
         </View>
         <View style={styles.linksContainer}>
+
           <View style={styles.leftLinkContainer}>
-          <TouchableWithoutFeedback onPress={Actions.what}>
-              <KmText style={styles.whatLink}>#what</KmText>
-            </TouchableWithoutFeedback>
+            <TouchableHighlight onPress={Actions.what}>
+              <View>
+               <KmText style={styles.whatLink}>#what</KmText>
+               <View style={styles.linkLine} />
+              </View>
+            </TouchableHighlight>
           </View>  
 
           <View style={styles.rightLinkContainer}>
-          <TouchableWithoutFeedback onPress={Actions.meet}>
-            <KmText style={styles.meetHereLink}>meet here</KmText>
-            </TouchableWithoutFeedback>
-            <TouchableWithoutFeedback onPress={Actions.goWho}>
-              <KmText style={styles.goLink}>go</KmText>
-            </TouchableWithoutFeedback>
+            <TouchableHighlight onPress={Actions.meet}>
+              <View>
+                <KmText style={styles.meetHereLink}>meet here</KmText>
+                <View style={styles.linkLine} />
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={Actions.goWho}>
+              <View>
+                <KmText style={styles.goLink}>go</KmText>
+                <View style={styles.linkLine} />
+              </View>
+            </TouchableHighlight>
           </View>
+
         </View>
       </BgView>
     );
@@ -61,7 +72,7 @@ const styles = {
     borderColor: 'rgba(0,0,0,1)'
   },
   profileInfo: {
-    marginLeft: 20
+    marginLeft: 40
   },
   profileHeader: {
     fontSize: 24
@@ -74,8 +85,8 @@ const styles = {
     marginLeft: 25,
   },
   profileContainer: {
-    marginTop: 35,
-    marginLeft: 35,
+    marginTop: 55,
+    marginLeft: 55,
     marginRight: 20,
    flexDirection: 'row',
   //  borderWidth: 1,
@@ -89,15 +100,34 @@ const styles = {
     marginLeft: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginRight: 0
+    marginRight: 0,
+    alignItems: 'flex-start',
   },
   leftLinkContainer: {
     marginTop: 120,
+    width: 120,
+    justifyContent: 'flex-end'
+  },
+  rightLinkContainer: {
+    paddingTop: 200,
   },
   whatLink: {
     borderBottomWidth: 1,
     borderBottomColor: 'white',
-    // borderWidth: 1,
+    textAlign: 'right',
+    fontSize: 24,
+  },
+  linkLine: {
+    height: 2,
+    backgroundColor: 'rgba(255,255,255,.33)'
+  },
+  goLink: {
+    fontSize: 60,
+    marginRight: 50,
+    marginTop: 40,
+  },
+  meetHereLink: {
+    fontSize: 24,    
   }
 };
 

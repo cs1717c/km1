@@ -14,13 +14,13 @@ class KmScrollView extends Component {
 
     if (inverted) {
       return (<View style={style}>
-        <Image source={require('Kameo/img/gradient3.png')} style={styles.scrollGradientInverted} pointerEvents={'none'} />
-        <ScrollView style={[styles.scrollerInverted, props.scrollStyle]} ref="scrollView">
-        <View style={styles.spacer} />
-          {props.children}
-          <View style={styles.spacerBottom} />
-        </ScrollView>
-      </View>);
+        <Image source={require('Kameo/img/gradient5.png')} style={styles.scrollGradientInverted} pointerEvents={'none'} />
+          <ScrollView style={[styles.scrollerInverted, props.scrollStyle]} ref="scrollView">
+          <View style={styles.spacer} />
+            {props.children}
+            <View style={styles.spacerBottom} />
+          </ScrollView>
+        </View>);
     } 
       return (
         <View style={style}>
@@ -32,7 +32,7 @@ class KmScrollView extends Component {
             {props.children}
             <View style={styles.spacer} />
           </ScrollView>
-          <Image source={require('Kameo/img/gradient2.png')} style={styles.scrollGradient} pointerEvents={'none'} />
+          <Image source={require('Kameo/img/gradient4.png')} style={styles.scrollGradient} pointerEvents={'none'} />
         </View>
       );
     
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     marginLeft: 0,
     marginRight: 0,
     padding: 20,
-    marginTop: -140,
+    marginTop: -120,
     marginBottom: 0,
     backgroundColor: 'rgba(0,0,0,0.2)',
   },

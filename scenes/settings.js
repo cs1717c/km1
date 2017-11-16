@@ -6,13 +6,13 @@ import { StyleSheet, View, Image, Text } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
 
-import { BgView, KmText } from 'Kameo/components';
+import { BgView, KmText, KmButton } from 'Kameo/components';
 
 class Settings extends Component {
   render() {
     return (
       <BgView>
-        <KmText>settings</KmText>
+        <KmButton toggle style={styles.goBtn} onPress={Actions.login}>Sign Out</KmButton>
       </BgView>
     );
   }

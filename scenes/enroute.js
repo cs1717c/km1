@@ -116,8 +116,9 @@ const styles = {
     // borderTopWidth: 1,
     borderBottomWidth: 1,
     flexShrink: 1,
-    marginTop: -30,
- 
+    marginTop: 0,
+    // borderWidth: 4,
+    // borderColor: 'red'
   },
 
   chatLogScroll: {

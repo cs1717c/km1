@@ -18,12 +18,12 @@ class DrawerContent extends React.Component {
         <TouchableHighlight onPress={Actions.go} style={styles.menuItem}>
           <Text style={styles.menuText}>go</Text>
         </TouchableHighlight>
-        <TouchableHighlight onPress={Actions.quest} style={styles.menuItem}>
+        {/* <TouchableHighlight onPress={Actions.quest} style={styles.menuItem}>
           <Text style={styles.menuText}>quest</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={Actions.connect} style={styles.menuItem}>
           <Text style={styles.menuText}>connect</Text>
-        </TouchableHighlight>
+        </TouchableHighlight> */}
         <TouchableHighlight onPress={Actions.places} style={styles.menuItem}>
           <Text style={styles.menuText}>places</Text>
         </TouchableHighlight>
@@ -42,7 +42,7 @@ class DrawerContent extends React.Component {
 const styles = StyleSheet.create({
   menuItem : {
     padding :20,
-    paddingVertical: 18
+    paddingVertical: 30
   },
   menuText:  {
     color: 'rgba(255,255,255,1)',
