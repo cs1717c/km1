@@ -78,7 +78,7 @@ class App extends Component {
             drawerPosition="right"
             title="Kameo"
             drawerWidth={240}
-            transitionConfig={() => ({ screenInterpolator: crossFade })}
+            {/* transitionConfig={() => ({ screenInterpolator: crossFade })} */}
             navBar={KmNavBar}
           >
             <Stack key="signedIn" transitionConfig={() => ({ screenInterpolator: crossFade })} hideNavBar>

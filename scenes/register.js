@@ -6,11 +6,23 @@ import { StyleSheet, View, StatusBar, Text, TextInput, TouchableHighlight, Image
 
 import { Actions } from 'react-native-router-flux';
 
-
 import { BgView, KmInput, KmButton, KmText } from 'Kameo/components';
 
+// import { Api } from 'Kameo/services';
+
+import { register } from 'Kameo/services/api';
 
 class Register extends Component {
+  onPressRegister = (e) => {
+    const user = {
+      email: 'test',
+      password: 'test',
+      name: 'test',
+    };
+
+    register(user);       
+  }
+
   render() {
     return (
       <BgView isDark>      
@@ -28,7 +40,7 @@ class Register extends Component {
         />
 
         <KmInput
-          onChangeText={text => this.setState({ email: text })}
+          onChangeText={text => this.setState({ name: text })}
           placeholder="Name"
           placeholderTextColor="rgba(255,255,255,0.5)"
           style={styles.inputContainer}
@@ -43,7 +55,7 @@ class Register extends Component {
         />
 
         <KmInput
-          onChangeText={text => this.setState({ password: text })}
+          onChangeText={text => this.setState({ passwordConfirm: text })}
           placeholder="Confirm Password"
           secureTextEntry
           placeholderTextColor="rgba(255,255,255,0.5)"
@@ -52,7 +64,7 @@ class Register extends Component {
 
         <KmButton
           underlayColor="rgba(255,255,255,0.3)"
-          onPress={Actions.home}
+          onPress={this.onPressRegister}
           style={styles.signInButton}
         >
 Sign Up
