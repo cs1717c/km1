@@ -1,16 +1,22 @@
-'use strict'
+import { combineReducers, createStore, applyMiddleware } from 'redux';
 
-// Redux
-import { combineReducers, createStore } from 'redux'
+import reducers from 'Kameo/reducers';
 
-// Navigation
-// import { DrawerNavigation } from '../routers/DrawerNavigation/navigationConfiguration'
-import { SignedInReducer } from '../routers/SignedInNavigation/navigationConfiguration'
+import sagas from 'Kameo/sagas';
 
-export default createStore(
-  combineReducers({
-    signedIn: SignedInReducer,
-    // signedIn: (state,action) => SignedInNavigation.router.getStateForAction(action,state),
-    // drawer: (state,action) => DrawerNavigation.router.getStateForAction(action,state),
-  })
-)
+import createSagaMiddleware from 'redux-saga';
+
+const configureStore = () => {
+  const sagaMiddleware = createSagaMiddleware();
+  
+  const store = createStore(
+    reducers,
+    applyMiddleware(sagaMiddleware),    
+  );  
+
+  sagaMiddleware.run(sagas);  
+
+  return store;  
+};
+
+export default configureStore;

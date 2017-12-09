@@ -2,6 +2,8 @@
 
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 import { StyleSheet, View, StatusBar, Text, TextInput, TouchableHighlight, Image } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
@@ -10,17 +12,27 @@ import { BgView, KmInput, KmButton, KmText } from 'Kameo/components';
 
 // import { Api } from 'Kameo/services';
 
-import { register } from 'Kameo/services/api';
+import actions from 'Kameo/actions';
+
+import { AuthenticationActions } from 'Kameo/actions';
 
 class Register extends Component {
+  state = {
+    email: '',
+    name: '',
+    password: '',
+  }
+
   onPressRegister = (e) => {
+    const { email, password, name } = this.state;
+
     const user = {
-      email: 'test',
-      password: 'test',
-      name: 'test',
+      email,
+      password,
+      name,
     };
 
-    register(user);       
+    this.props.register(email, password, name);
   }
 
   render() {
@@ -119,4 +131,18 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Register;
+function mapStateToProps(store, ownProps) {
+  return {
+    ...store
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    register: (email, password, name) => {
+      dispatch(AuthenticationActions.register(email, password, name));
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

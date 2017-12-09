@@ -16,14 +16,14 @@ class EnRoute extends Component {
     const messageRows = [];
 
     const images = {
-      '01' : require('../img/profiles/01.jpg'),
-      '02' : require('../img/profiles/02.jpg'),
-      '03' : require('../img/profiles/03.jpg'),
-      '04' : require('../img/profiles/04.jpg'),
-      '05' : require('../img/profiles/05.jpg'),
-      '06' : require('../img/profiles/06.jpg'),
-      '07' : require('../img/profiles/07.jpg'),
-      '08' : require('../img/profiles/08.jpg'),
+      '01' : require('../../img/profiles/01.jpg'),
+      '02' : require('../../img/profiles/02.jpg'),
+      '03' : require('../../img/profiles/03.jpg'),
+      '04' : require('../../img/profiles/04.jpg'),
+      '05' : require('../../img/profiles/05.jpg'),
+      '06' : require('../../img/profiles/06.jpg'),
+      '07' : require('../../img/profiles/07.jpg'),
+      '08' : require('../../img/profiles/08.jpg'),
     }
 
 

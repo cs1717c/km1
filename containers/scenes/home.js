@@ -8,17 +8,20 @@ import { Actions } from 'react-native-router-flux';
 
 import { BgView, KmText } from 'Kameo/components';
 
+import { connect } from 'react-redux';
 
 const { bp, vw, vh } = require('react-native-relative-units')(375);
 
 class Home extends Component {
   render() {
+    console.log(this.props);
+
     return (
       <BgView style={styles.container}>
         <View style={styles.profileContainer}>
-          <Image source={require('Kameo/img/profiles/01.jpg')} style={styles.profile} />
+          <Image source={require('Kameo/img/profiles/00.jpg')} style={styles.profile} />
           <View style={styles.profileInfo}>
-            <KmText style={styles.profileHeader}>Hello, John</KmText>
+            <KmText style={styles.profileHeader}>Hello, {this.props.authentication.user.name}</KmText>
             <KmText style={styles.profileSubHeader}>27 - Male - London</KmText>
           </View>
         </View>
@@ -131,4 +134,21 @@ const styles = {
   }
 };
 
-export default Home;
+function mapStateToProps(store, ownProps) {
+  return {
+    ...store
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    // login: (email, password, name) => {
+    //   dispatch(AuthenticationActions.login(email, password, name));
+    // },
+    // showErrorModal: (text) => {
+    //   dispatch(ErrorActions.showErrorModal(text));
+    // }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

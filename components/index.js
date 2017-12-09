@@ -7,5 +7,4 @@ import KmText from './KmText';
 import KmNavBar from './KmNavBar';
 import KmScrollView from './KmScrollView';
 
-
 export { BgView, CustomMenu, MenuItems, KmInput, KmButton, KmText, KmNavBar, KmScrollView };

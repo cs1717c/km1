@@ -63,7 +63,7 @@ class GoFinal extends Component {
         </View>
 
         <View style={styles.footer}>
-          <KmText style={styles.footerText}>... or shake your phone for another option</KmText>
+        <KmButton toggle style={styles.goBtn} onPress={Actions.enRoute}>more</KmButton><KmText style={styles.footerText}> ... or see another option</KmText>
         </View>
 
       </BgView>

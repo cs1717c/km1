@@ -2,22 +2,47 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, View, StatusBar, Text, TextInput, TouchableHighlight, Image } from 'react-native';
+import { StyleSheet, View, StatusBar, Text, TextInput, TouchableHighlight, Image, Modal } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
+
+import { connect } from 'react-redux';
 
 import { BgView, KmInput, KmButton, KmText } from 'Kameo/components';
 
 import { mainStyles } from 'Kameo/style.js';
+
+import { AuthenticationActions, ErrorActions } from 'Kameo/actions';
+
+import { ErrorModalContainer } from 'Kameo/containers';
 
 const goToRegister = () => {
   Actions.register();
 };
 
 class Login extends Component {
+  state = {
+    email: '',
+    name: '',
+    password: '',
+  }
+
+  onPressLogin = (e) => {
+    const { email, password } = this.state;
+
+    const user = {
+      email,
+      password,
+    };
+
+    // this.props.showErrorModal('test');
+    this.props.login(email, password);
+  }
+
   render() {
     return (
       <BgView isDark>      
+        <ErrorModalContainer />
         <View style={styles.container}>
           <StatusBar backgroundColor="blue" barStyle="light-content" hidden />
 
@@ -40,7 +65,7 @@ class Login extends Component {
 
           <KmButton
             underlayColor="rgba(255,255,255,0.3)"
-            onPress={Actions.home}
+            onPress={this.onPressLogin.bind(this)}
             style={styles.signInButton}
           >
 Sign In
@@ -137,4 +162,21 @@ const styles = StyleSheet.create({
   // }
 });
 
-export default Login;
+function mapStateToProps(store, ownProps) {
+  return {
+    ...store
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    login: (email, password, name) => {
+      dispatch(AuthenticationActions.login(email, password, name));
+    },
+    showErrorModal: (text) => {
+      dispatch(ErrorActions.showErrorModal(text));
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

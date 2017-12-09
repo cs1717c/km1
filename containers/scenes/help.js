@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import { StyleSheet, View, Image, Text } from 'react-native';
 
@@ -12,7 +13,8 @@ class Help extends Component {
   render() {
     return (
       <BgView>
-        <KmText>go who</KmText>
+        <KmText>help</KmText>
+        <KmText> The current scene is titled {this.props.rxr.scene.title}</KmText>
       </BgView>
     );
   }
@@ -34,4 +36,4 @@ const styles = {
   }
 };
 
-export default Help;
+export default connect(({rxr}) => ({rxr}))(Help);
