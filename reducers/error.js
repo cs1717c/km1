@@ -1,4 +1,4 @@
-import { ErrorActionTypes } from 'Kameo/actions/types/index';
+import { ErrorActionTypes } from 'Kameo/actions/types';
 
 const initialState = {
   showErrorModal: false,
@@ -6,8 +6,6 @@ const initialState = {
 };
 
 function showErrorModal(state, payload) {  
-  console.log('showing error modal');
-  
   return {  
     ...state,
     errorModalVisible: true,
@@ -23,9 +21,6 @@ function hideErrorModal(state, payload) {
 }
 
 export default function reducer(state = initialState, payload = {}) {
-  console.log(payload);
-  console.log('error reducer');
-
   switch (payload.type) {
     case ErrorActionTypes.SHOW_MODAL:
      return showErrorModal(state, payload);

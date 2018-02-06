@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     color: '#fff',
     fontFamily: 'Avenir Next',
-    fontSize:20,
+    fontSize:12,
     justifyContent: 'flex-end'
   },
 });

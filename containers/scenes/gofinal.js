@@ -63,7 +63,7 @@ class GoFinal extends Component {
         </View>
 
         <View style={styles.footer}>
-        <KmButton toggle style={styles.goBtn} onPress={Actions.enRoute}>more</KmButton><KmText style={styles.footerText}> ... or see another option</KmText>
+        <KmButton toggle style={styles.moreBtn} onPress={Actions.enRoute}>more</KmButton><KmText style={styles.footerText}> ... or see another option</KmText>
         </View>
 
       </BgView>
@@ -80,7 +80,7 @@ const styles = {
   },
 
   header: {
-    fontSize: 32,
+    fontSize: 26,
     marginTop: 20,
     marginBottom: 30,
     fontWeight: '400'
@@ -92,7 +92,7 @@ const styles = {
   },
 
   sectionCopy: {
-    fontSize: 16,
+    fontSize: 13,
     color: 'rgba(255,255,255,0.7)'
   },
 
@@ -103,18 +103,18 @@ const styles = {
   },
 
   tag: {
-    fontSize: 16,
+    fontSize: 12,
     color: 'rgba(255,255,255,0.7)'
     
   },
 
   sectionHeader: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '600',
   },
 
   subHeader: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '400'
   },
 
@@ -147,7 +147,7 @@ const styles = {
   },
 
   goHeader: {
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: '400'
   },
 

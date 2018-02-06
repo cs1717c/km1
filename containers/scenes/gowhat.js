@@ -55,7 +55,7 @@ const styles = {
   },
 
   header: {
-    fontSize: 36,
+    fontSize: 28,
     marginTop: 40
   },
 
@@ -73,7 +73,7 @@ const styles = {
   },
 
   subHeader: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: '400',
     marginTop: 30,
   },
@@ -114,7 +114,7 @@ const styles = {
     paddingRight: 7,
     paddingVertical: 7,
     fontWeight: '400',
-    fontSize: 14,
+    fontSize: 10,
     color: 'rgba(255,255,255,0.7)'
   },
 

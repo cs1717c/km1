@@ -36,8 +36,9 @@ const styles = StyleSheet.create({
         alignSelf: 'stretch',
         width: null,
         margin: -1,
-        marginTop: -70,
+        marginTop: -50,
         marginLeft:-200,
+        borderWidth: 4,
     },
     items: {
        
@@ -57,9 +58,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         //  backgroundColor: '#F5FCFF',
         padding: 0,
-        paddingTop: 80,
+        paddingTop: 40,
         alignSelf: 'stretch',
-        marginLeft: 240,
+        marginLeft: 340,
         marginRight: 0
     },
     drawer: {

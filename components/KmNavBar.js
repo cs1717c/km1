@@ -29,7 +29,7 @@ const styles = {
   },
   backgroundStyle: {
     backgroundColor: 'transparent',
-    height: 60,
+    height: 50,
     borderWidth: 0,
     borderColor: 'red'
   },
@@ -58,16 +58,18 @@ const styles = {
     left: 210
   },
   logo: {
-    height: 28,
-    width: 123,
-    margin: 15,
+    height: 23,
+    width: 100,
+    marginLeft: 15,
+    marginTop: -4,
   },
   menuContainer: {
     marginRight: 15
   },
   menu: {
-    width:40,
-    height:40
+    width:30,
+    height: 30,
+    marginTop: 0
   }
 };
 

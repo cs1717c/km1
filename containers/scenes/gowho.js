@@ -52,8 +52,8 @@ const styles = {
   },
 
   header: {
-    fontSize: 36,
-    marginTop: 60
+    fontSize: 30,
+    marginTop: 40
   },
 
   section: {

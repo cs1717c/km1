@@ -8,19 +8,46 @@ import { Actions } from 'react-native-router-flux';
 
 import { BgView, KmText, KmInput, KmButton } from 'Kameo/components';
 
-import tags from 'Kameo/utilities/tags';
-
 import LinearGradient from 'react-native-linear-gradient';
 
+import { connect } from 'react-redux';
+
+import { WhatActions } from 'Kameo/actions';
 
 class What extends Component {
+  handleSearchInput = (text) => {
+    console.log('input');
+    this.setState({query: text});
+    this.props.fetchTags(text);
+    console.log(this.state);
+  }
+  
+  handleOnAddTag = () => {
+    console.log('adding');
+    this.props.addTag(this.state.query);
+  }
+
   render() {
+    const { tags } = this.props.what;
+
     const tagRows = [];
-    for (const tag of tags.slice(0,20)) {
+    
+    console.log(tags);
+
+    const fetchedTags = tags.tags;
+    
+    for (const tag of fetchedTags) {
       tagRows.push(
-        <View key={tag} style={styles.tagRow}>
-          <KmText style={styles.tag}>#{tag}</KmText>
-          <KmText style={styles.subscriberCount}>100k</KmText>
+        <View key={tag._id} style={styles.tagRow}>
+          <KmText style={styles.tag}>{tag.tag}</KmText>
+          <KmText style={styles.subscriberCount}>{tag.users.length}</KmText>
+        </View>);
+    }
+
+    if (tagRows.length === 0) {
+      tagRows.push(
+        <View key='add-tag' style={styles.tagRow}>
+          <KmText style={styles.tagAdd} onPress={this.handleOnAddTag}>Add #{this.state.query}</KmText>
         </View>);
     }
 
@@ -32,6 +59,7 @@ class What extends Component {
           placeholder='#what are you into?'
           placeholderTextColor="rgba(255,255,255,1)"
           autoCapitalize="none"
+          onChangeText={this.handleSearchInput}
         />
         
 
@@ -41,7 +69,7 @@ class What extends Component {
         </ScrollView>
         <Image source={require('Kameo/img/gradient4.png')} style={styles.scrollGradient} pointerEvents={'none'} />
         <View style={styles.footer}>
-        <KmButton style={styles.next}>only my choices</KmButton>
+        <KmButton style={styles.next}>show my selections</KmButton>
           <KmButton style={styles.next} onPress={Actions.goWhere}>done</KmButton>
         </View>
 
@@ -67,7 +95,7 @@ const styles = {
 
   page: {
     padding: 0,
-    paddingTop: 80
+    paddingTop: 50
   },
 
   header: {
@@ -78,11 +106,15 @@ const styles = {
   search: {
     paddingLeft: 20,
     borderColor: 'rgba(0,0,0,1)',
-    paddingBottom: 20,
+    paddingBottom: 30,
+    borderWidth: 1,
+    height: 45,
   },
 
   searchInput: {
-    fontSize: 24
+    fontSize: 20,
+    height: 45,
+    // borderWidth: 2,
   },
 
   tagScroller: {
@@ -112,20 +144,48 @@ const styles = {
   },
 
   tag: {
-    fontSize: 24,
+    fontSize: 18,
     color: 'rgba(255,255,255,0.5)'
+  },
+
+  tagAdd: {
+    fontSize: 18,
+    fontWeight: '500',
+    textAlign: 'center',
+    width: '100%',
+    color: 'rgba(255,255,255,1)'
   },
 
   subscriberCount: {
     marginTop: 2, 
-    color: 'rgba(255,255,255,0.75)'
+    color: 'rgba(255,255,255,0.75)',
+    fontSize: 12,
   },
 
   footer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 8
+    padding: 5,
   }
 };
 
-export default What;
+// export default What;
+
+function mapStateToProps(store, ownProps) {
+  return {
+    ...store
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addTag: (tag) => {
+      dispatch(WhatActions.addTag(tag));
+    },
+    fetchTags: (query) => {
+      dispatch(WhatActions.fetchTags(query));
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(What);

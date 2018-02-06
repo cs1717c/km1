@@ -6,13 +6,20 @@ import sagas from 'Kameo/sagas';
 
 import createSagaMiddleware from 'redux-saga';
 
-const configureStore = () => {
+const configureStore = (initialState) => {
   const sagaMiddleware = createSagaMiddleware();
   
   const store = createStore(
     reducers,
     applyMiddleware(sagaMiddleware),    
   );  
+
+  if (module.hot) {
+    module.hot.accept(() => {
+      const nextRootReducer = require('../reducers/index').default;
+      store.replaceReducer(nextRootReducer);
+    });
+  }
 
   sagaMiddleware.run(sagas);  
 

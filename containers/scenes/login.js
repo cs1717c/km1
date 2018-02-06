@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, View, StatusBar, Text, TextInput, TouchableHighlight, Image, Modal } from 'react-native';
+import { StyleSheet, View, StatusBar, Text, TextInput, TouchableHighlight, Image, Modal, Keyboard, TouchableWithoutFeedback } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
 
@@ -14,7 +14,11 @@ import { mainStyles } from 'Kameo/style.js';
 
 import { AuthenticationActions, ErrorActions } from 'Kameo/actions';
 
-import { ErrorModalContainer } from 'Kameo/containers';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
+import { ErrorModalContainer, CommonComponentsContainer } from 'Kameo/containers';
+
+import Spinner from 'react-native-loading-spinner-overlay';
 
 const goToRegister = () => {
   Actions.register();
@@ -30,56 +34,53 @@ class Login extends Component {
   onPressLogin = (e) => {
     const { email, password } = this.state;
 
-    const user = {
-      email,
-      password,
-    };
-
-    // this.props.showErrorModal('test');
     this.props.login(email, password);
   }
 
   render() {
     return (
-      <BgView isDark>      
-        <ErrorModalContainer />
-        <View style={styles.container}>
-          <StatusBar backgroundColor="blue" barStyle="light-content" hidden />
+        <BgView isDark>      
+          <ErrorModalContainer />
+          <Spinner visible={this.props.spinner.visible} />
+          <KeyboardAwareScrollView>      
+          <View style={styles.container}>
+            <StatusBar backgroundColor="blue" barStyle="light-content" hidden />
 
-          <Text style={styles.heading}>Sign in to Kameo</Text>
+            <Text style={styles.heading}>Sign in to Kameo</Text>
 
-          <KmInput
-            onChangeText={text => this.setState({ email: text })}
-            placeholder="Email"
-            placeholderTextColor="rgba(255,255,255,0.5)"
-            autoCapitalize="none"
-            style={styles.inputContainer}
-          />
+            <KmInput
+              onChangeText={text => this.setState({ email: text })}
+              placeholder="Email"
+              placeholderTextColor="rgba(255,255,255,0.5)"
+              autoCapitalize="none"
+              style={styles.inputContainer}
+            />
 
-          <KmInput
-            onChangeText={text => this.setState({ password: text })}
-            placeholder="Password"
-            secureTextEntry
-            placeholderTextColor="rgba(255,255,255,0.5)"
-          />
+            <KmInput
+              onChangeText={text => this.setState({ password: text })}
+              placeholder="Password"
+              secureTextEntry
+              placeholderTextColor="rgba(255,255,255,0.5)"
+            />
 
-          <KmButton
-            underlayColor="rgba(255,255,255,0.3)"
-            onPress={this.onPressLogin.bind(this)}
-            style={styles.signInButton}
-          >
-Sign In
-          </KmButton>
+            <KmButton
+              underlayColor="rgba(255,255,255,0.3)"
+              onPress={this.onPressLogin.bind(this)}
+              style={styles.signInButton}
+            >
+  Sign In
+            </KmButton>
 
-          <KmText style={styles.registerLink} onPress={goToRegister}>
-            Register
-          </KmText>
+            <KmText style={styles.registerLink} onPress={goToRegister}>
+              Register
+            </KmText>
 
-          <KmText style={styles.facebookLink} onPress={goToRegister}>
-            Sign in with Facebook
-          </KmText>
+            <KmText style={styles.facebookLink} onPress={goToRegister}>
+              Sign in with Facebook
+            </KmText>
 
-        </View>
+          </View>
+          </KeyboardAwareScrollView>
         </BgView>
     );
   }
@@ -95,17 +96,17 @@ const styles = StyleSheet.create({
   },
 
   heading: {
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: '300',
     marginBottom: 40,
-    marginTop: 60,
+    marginTop: 40,
     fontFamily: 'Avenir Next',        
     backgroundColor: 'rgba(0,0,0,0)',
     color: 'rgba(255,255,255,1)'
   },
   
   inputContainer: {
-    marginTop: 50,
+    marginTop: 30,
     marginBottom: 20,
   },
 
@@ -115,11 +116,11 @@ const styles = StyleSheet.create({
 
   signInButton: {
     marginTop: 30,
-    width: '100%',
+    width: '70%',
   },
 
   registerLink: {
-    marginTop: 100,
+    marginTop: 70,
   },
 
   facebookLink: {

@@ -4,6 +4,7 @@ import { AuthenticationActionTypes } from 'Kameo/actions/types';
 
 import { loginSuccess } from 'Kameo/actions/authentication-actions';
 import { showErrorModal } from 'Kameo/actions/error-actions';
+import { showSpinner, hideSpinner } from 'Kameo/actions/spinner-actions';
 
 import { register, login } from 'Kameo/services/api';
 
@@ -15,7 +16,19 @@ function * watchRegisterRequest() {
 }
 
 function* registerSaga (payload) {
-  yield call(register, payload);
+  yield put(showSpinner());
+  
+    try {
+      const registerResponse = yield call(register, payload);
+      yield put(loginSuccess(registerResponse));
+      yield put(showErrorModal('Thanks for signing up with Kameo.\n\nPlease sign in with the details you just entered.'));
+      Actions.login();
+    } catch (e) {
+      const response = JSON.parse(e._bodyText);
+      yield put(showErrorModal(response.message));
+    }
+  
+    yield put(hideSpinner());  
 }
 
 function * watchLoginRequest() {
@@ -23,15 +36,18 @@ function * watchLoginRequest() {
 }
 
 function* loginSaga (payload) {
-  const loggedInResponse = yield call(login, payload);  
+  yield put(showSpinner());
 
-  if (!loggedInResponse.success) {
-    yield put(showErrorModal(loggedInResponse.error._bodyText));    
-  }
-  else {
+  try {
+    const loggedInResponse = yield call(login, payload);
     yield put(loginSuccess(loggedInResponse));
     yield Actions.home();
+  } catch (e) {
+    const response = JSON.parse(e._bodyText);
+    yield put(showErrorModal(response.message));
   }
+
+  yield put(hideSpinner());  
 }
 
 export default function* root() {

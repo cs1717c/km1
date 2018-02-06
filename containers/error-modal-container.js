@@ -49,19 +49,21 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: 'rgba(0,0,0,0.8)',    
     zIndex: 9,
+    // borderWidth: 4,
+    borderColor: 'red',
+    marginTop: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   container: {
     position: 'absolute',
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    padding: 40,
+    padding: 30,
     flexDirection: 'column',
-    margin: 40,
-    width: 300,
-    height: 300,
-    top: '50%',
-    marginTop: -120,
+    margin: 0,
+    width: '80%',
     borderRadius: 8,
     zIndex: 10,
     backgroundColor: 'rgba(80,70,80,1)',
@@ -70,6 +72,9 @@ const styles = StyleSheet.create({
   },
   errorText : {
     color: 'white',
+    marginBottom: 30,
+    lineHeight: 20,
+    textAlign: 'center',
   }
 });
 

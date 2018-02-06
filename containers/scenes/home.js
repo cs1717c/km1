@@ -14,8 +14,6 @@ const { bp, vw, vh } = require('react-native-relative-units')(375);
 
 class Home extends Component {
   render() {
-    console.log(this.props);
-
     return (
       <BgView style={styles.container}>
         <View style={styles.profileContainer}>
@@ -60,7 +58,9 @@ class Home extends Component {
 const styles = {
   container: {
     flex: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    // borderWidth: 2,
+    borderColor: 'red',
   },
   link: {
     fontSize: 36,
@@ -68,27 +68,28 @@ const styles = {
     padding: 25,
   },
   profile: {
-    width: 71,
-    height: 70,
+    width: 57,
+    height: 56,
     borderWidth: 2,
     borderRadius: 8,
     borderColor: 'rgba(0,0,0,1)'
   },
   profileInfo: {
-    marginLeft: 40
+    marginLeft: 30
   },
   profileHeader: {
-    fontSize: 24
+    fontSize: 19
   },
   profileSubHeader: {
-    marginTop: 10
+    marginTop: 7,
+    fontSize: 14,
   },
   profileLink: {
     fontSize: 40,
     marginLeft: 25,
   },
   profileContainer: {
-    marginTop: 55,
+    marginTop: 45,
     marginLeft: 55,
     marginRight: 20,
    flexDirection: 'row',
@@ -99,7 +100,7 @@ const styles = {
   // padding: 20,
   },
   linksContainer: {
-    marginTop: 20,
+    marginTop: 0,
     marginLeft: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -107,30 +108,30 @@ const styles = {
     alignItems: 'flex-start',
   },
   leftLinkContainer: {
-    marginTop: 120,
-    width: 120,
+    marginTop: 70,
+    width: 110,
     justifyContent: 'flex-end'
   },
   rightLinkContainer: {
-    paddingTop: 200,
+    paddingTop: 150,
   },
   whatLink: {
     borderBottomWidth: 1,
     borderBottomColor: 'white',
     textAlign: 'right',
-    fontSize: 24,
+    fontSize: 21,
   },
   linkLine: {
     height: 2,
     backgroundColor: 'rgba(255,255,255,.33)'
   },
   goLink: {
-    fontSize: 60,
+    fontSize: 50,
     marginRight: 50,
-    marginTop: 40,
+    marginTop: 50,
   },
   meetHereLink: {
-    fontSize: 24,    
+    fontSize: 21  ,    
   }
 };
 

@@ -21,11 +21,11 @@ class Places extends Component {
       const stars = [];
 
       for (let i = 0; i < rating; i++) {
-        stars.push(<Image source={require('Kameo/img/star-active2.png')} style={styles.placeStar} />);
+        stars.push(<Image source={require('Kameo/img/star-active2.png')} style={styles.placeStar} key={`active-${i}`} />);
       }
 
       for (let i = 0; i < 5-rating; i++) {
-        stars.push(<Image source={require('Kameo/img/star2.png')} style={[styles.placeStar]} />);
+        stars.push(<Image source={require('Kameo/img/star2.png')} style={[styles.placeStar]} key={`inactive-${i}`} />);
       }
 
       placeRows.push(
@@ -39,7 +39,7 @@ class Places extends Component {
 
           <View style={styles.placeBottomRow}>
             <KmText style={styles.placeTags}>{tags}</KmText>
-            <KmButton style={styles.placeInfoButton}>...</KmButton>
+            {/* <KmButton style={styles.placeInfoButton}>...</KmButton> */}
           </View>
         </View>);
     }
@@ -87,22 +87,26 @@ const styles = {
 
   page: {
     padding: 0,
-    paddingTop: 80
+    paddingTop: 50,
   },
 
   header: {
-    marginBottom: 10,
+    marginBottom: 0,
     marginLeft: 10
   },
 
   search: {
     paddingLeft: 20,
     borderColor: 'rgba(0,0,0,1)',
-    paddingBottom: 20,
+    paddingBottom: 30,
+    borderWidth: 1,
+    height: 45,
   },
 
   searchInput: {
-    fontSize: 24
+    fontSize: 20,
+    height: 45,
+    // borderWidth: 2,
   },
 
   placeScroller: {
@@ -158,18 +162,18 @@ const styles = {
     textAlign: 'left',
     // alignSelf: 'flex-start',
     fontWeight: '500',
-    fontSize: 18,
+    fontSize: 14,
   },
 
   placeArea: {
     // alignSelf: 'flex-end',
-    fontSize: 14,
+    fontSize: 12,
   },
 
   placeInfo: {
     width: '100%',
     textAlign: 'left',
-    fontSize: 14,
+    fontSize: 12,
     marginTop: 5
   },
 
@@ -180,18 +184,20 @@ const styles = {
   },
 
   placeStar: {
-    width: 16,
-    height: 16,
+    width: 12,
+    height: 12,
     margin: 3,
+    marginTop: 8,
   },
 
   placeTags: {
-    fontSize: 13,
-    width: '80%',
+    fontSize: 11,
+    width: '100%',
+    marginTop: 10,
   },
 
   place: {
-    fontSize: 24,
+    fontSize: 21,
     color: 'rgba(255,255,255,0.5)'
   },
 

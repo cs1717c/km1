@@ -13,8 +13,7 @@ function register(state, payload) {
 
 
 function loginSuccess(state, payload) {
-  console.log('login success');
-  const { user } = payload.response;
+  const { user, token } = payload.response;
 
   return {  
     ...state,

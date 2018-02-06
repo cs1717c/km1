@@ -41,7 +41,7 @@ export class Header extends Component {
       justifyContent: 'flex-start',
       flexDirection: 'row'
     }}>
-      <Text style={{ color: 'white', fontSize: 25, fontFamily: 'Avenir Next', fontWeight: '400', flexGrow: 1 }}>Kameo</Text>
+      <Text style={{ color: 'white', fontSize: 20, fontFamily: 'Avenir Next', fontWeight: '400', flexGrow: 1 }}>Kameo</Text>
       <Icon name='menu' size={22} color="#FFF" style={{ paddingRight: 5, paddingTop: 5 }} onPress={toggle.bind(this)} />
     </View>);
   }
@@ -51,7 +51,7 @@ let ImageHeader = React.createClass({
   render() {
     console.log('ImageHeader props', this.props);
     return (
-      <View style={{ height: 60, justifyContent: 'flex-end', padding: 0, paddingTop: 25, paddingLeft: 5, backgroundColor: 'rgba(255,255,255,0.0)' }}>
+      <View style={{ height: 40, justifyContent: 'flex-end', padding: 0, paddingTop: 25, paddingLeft: 5, backgroundColor: 'rgba(255,255,255,0.0)' }}>
         <StatusBar
           barStyle="light-content"
         />

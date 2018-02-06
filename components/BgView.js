@@ -15,12 +15,12 @@ class BgView extends Component {
 
     if (isDark) {
       return (
-      <Image source={require('Kameo/img/home_bg.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
+      <Image source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
       {this.props.children}
       </Image>);
     } else {
       return  (
-      <Image source={require('Kameo/img/main_bg.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.stretch}>
+      <Image source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.stretch}>
       {this.props.children}
       </Image>); 
     }
@@ -33,9 +33,9 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     width: null,
     margin: 0,
-    marginTop: -60,
-    paddingTop: 65,
-    backgroundColor: '#1d1a28'
+    marginTop: -50,
+    paddingTop: 50,
+    backgroundColor: '#1d1a28',
   },
 });
 

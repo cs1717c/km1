@@ -10,6 +10,8 @@ import { BgView, KmText, KmButton, KmInput, KmScrollView } from 'Kameo/component
 
 import messages from 'Kameo/utilities/messages';
 
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
 class EnRoute extends Component {
 
   render() {
@@ -85,7 +87,7 @@ const styles = {
   },
 
   header: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '400',  
     flexShrink: 1,
     lineHeight: 20,
@@ -93,7 +95,7 @@ const styles = {
   },
 
   placeInfo: {
-    fontSize: 24,
+    fontSize: 21,
   },
 
   buttonContainer: {
@@ -128,8 +130,8 @@ const styles = {
   },
 
   messagePhoto: {
-    width: 60,
-    height: 60,
+    width: 40,
+    height: 40,
     // borderWidth: 2,
     borderRadius: 8,
     marginRight: 15
@@ -147,9 +149,9 @@ const styles = {
 
   messageBody: {
       flexShrink: 1,
-      width: 260,
+      width: 230,
       color: 'rgba(255,255,255,0.7)',
-      fontSize: 16,
+      fontSize: 12,
   },
 
   messageAuthor: {

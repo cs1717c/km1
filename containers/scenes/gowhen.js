@@ -55,7 +55,7 @@ const styles = {
   },
 
   header: {
-    fontSize: 36,
+    fontSize: 28,
     marginTop: 50
   },
 
@@ -66,12 +66,12 @@ const styles = {
   },
 
   subHeader: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '400'
   },
 
   areasHeader: {
-    fontSize: 20
+    fontSize: 18
   },
 
   areasBody: {
@@ -88,7 +88,7 @@ const styles = {
   },
 
   areaBtn: {
-    width: 90,
+    width: 70,
     marginHorizontal: 5,
     marginTop: 20,
     paddingVertical: 10,

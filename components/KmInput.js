@@ -21,14 +21,14 @@ const styles = StyleSheet.create({
   input: {
     height: '100%',
     width: '100%',
-    fontSize: 18,
+    fontSize: 16,
     width: '100%',
     borderColor: 'rgba(255,255,255,0.2)',
     color: 'rgba(255,255,255,1)',
     fontFamily: 'Avenir Next'
   },
   container: {
-    height: 40,
+    height: 36,
     width: '100%',
     paddingVertical: 0,
     paddingHorizontal: 5,

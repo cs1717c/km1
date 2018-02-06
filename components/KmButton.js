@@ -12,7 +12,7 @@ class KmButton extends Component {
     delete props.style;
 
     return (
-        <TouchableHighlight style={[styles.button, style]} {...props}>
+        <TouchableHighlight underlayColor="rgba(255,255,255)" style={[styles.button, style]} {...props}>
           <Text style={[styles.text, textStyle]}>{props.children}</Text>
         </TouchableHighlight>
     );
@@ -22,16 +22,17 @@ class KmButton extends Component {
 const styles = StyleSheet.create({
   button: {
     borderWidth: 1,
-    borderColor: 'rgba(0,0,0,0.7)',
+    borderColor: 'rgba(0,0,0,0.8)',
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    backgroundColor: 'rgba(93,83,91,0.3)'
+    backgroundColor: 'rgba(255,255,255,0.3)'
   },
   text: {
     color: 'rgba(255,255,255,1)',
     textAlign: 'center',    
-    fontSize: 18,
+    fontSize: 14,
+    fontWeight: '500',
     fontFamily: 'Avenir Next',    
   }
 });

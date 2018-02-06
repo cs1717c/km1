@@ -10,6 +10,8 @@ import { Actions } from 'react-native-router-flux';
 
 import { BgView, KmInput, KmButton, KmText } from 'Kameo/components';
 
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
 // import { Api } from 'Kameo/services';
 
 import actions from 'Kameo/actions';
@@ -38,51 +40,53 @@ class Register extends Component {
   render() {
     return (
       <BgView isDark>      
-      <View style={styles.container}>
-        <StatusBar backgroundColor="blue" barStyle="light-content" hidden />
+        <KeyboardAwareScrollView>
+          <View style={styles.container}>
+            <StatusBar backgroundColor="blue" barStyle="light-content" hidden />
 
-        <Text style={styles.heading}>Sign Up</Text>
+            <Text style={styles.heading}>Sign Up</Text>
 
-        <KmInput
-          onChangeText={text => this.setState({ email: text })}
-          placeholder="Email"
-          placeholderTextColor="rgba(255,255,255,0.5)"
-          autoCapitalize="none"
-          style={styles.inputContainer}
-        />
+            <KmInput
+              onChangeText={text => this.setState({ email: text })}
+              placeholder="Email"
+              placeholderTextColor="rgba(255,255,255,0.5)"
+              autoCapitalize="none"
+              style={styles.inputContainer}
+            />
 
-        <KmInput
-          onChangeText={text => this.setState({ name: text })}
-          placeholder="Name"
-          placeholderTextColor="rgba(255,255,255,0.5)"
-          style={styles.inputContainer}
-        />
+            <KmInput
+              onChangeText={text => this.setState({ name: text })}
+              placeholder="Name"
+              placeholderTextColor="rgba(255,255,255,0.5)"
+              style={styles.inputContainer}
+            />
 
-        <KmInput
-          onChangeText={text => this.setState({ password: text })}
-          placeholder="Password"
-          secureTextEntry
-          placeholderTextColor="rgba(255,255,255,0.5)"
-          style={styles.inputContainer}
-        />
+            <KmInput
+              onChangeText={text => this.setState({ password: text })}
+              placeholder="Password"
+              secureTextEntry
+              placeholderTextColor="rgba(255,255,255,0.5)"
+              style={styles.inputContainer}
+            />
 
-        <KmInput
-          onChangeText={text => this.setState({ passwordConfirm: text })}
-          placeholder="Confirm Password"
-          secureTextEntry
-          placeholderTextColor="rgba(255,255,255,0.5)"
-          style={styles.inputContainer}
-        />
+            <KmInput
+              onChangeText={text => this.setState({ passwordConfirm: text })}
+              placeholder="Confirm Password"
+              secureTextEntry
+              placeholderTextColor="rgba(255,255,255,0.5)"
+              style={styles.inputContainer}
+            />
 
-        <KmButton
-          underlayColor="rgba(255,255,255,0.3)"
-          onPress={this.onPressRegister}
-          style={styles.signInButton}
-        >
-Sign Up
-        </KmButton>
+            <KmButton
+              underlayColor="rgba(255,255,255,0.3)"
+              onPress={this.onPressRegister}
+              style={styles.signInButton}
+            >
+    Sign Up
+            </KmButton>
 
-      </View>
+          </View>
+        </KeyboardAwareScrollView>
       </BgView>
     );
   }
@@ -98,9 +102,9 @@ const styles = StyleSheet.create({
   },
 
   heading: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: '300',
-    marginBottom: 60,
+    marginBottom: 40,
     marginTop: 30,
     fontFamily: 'Avenir Next',        
     backgroundColor: 'rgba(0,0,0,0)',
@@ -119,7 +123,7 @@ const styles = StyleSheet.create({
   signInButton: {
     width: '80%',
     margin: 30,
-    marginTop: 80,
+    marginTop: 50,
   },
 
   registerLink: {
