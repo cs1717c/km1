@@ -25,7 +25,7 @@ class DrawerContent extends React.Component {
         <TouchableHighlight onPress={Actions.connect} style={styles.menuItem}>
           <Text style={styles.menuText}>connect</Text>
         </TouchableHighlight> */}
-        <TouchableHighlight onPress={Actions.places} style={styles.menuItem}>
+        <TouchableHighlight onPress={this.props.goToPlaces} style={styles.menuItem}>
           <Text style={styles.menuText}>places</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={Actions.settings} style={styles.menuItem}>
@@ -43,7 +43,7 @@ class DrawerContent extends React.Component {
 const styles = StyleSheet.create({
   menuItem : {
     padding :20,
-    paddingVertical: 25
+    paddingVertical: 35
   },
   menuText:  {
     color: 'rgba(255,255,255,1)',
@@ -74,6 +74,9 @@ function mapDispatchToProps(dispatch) {
   return {
     goToWhat: () => {
       dispatch(NavigationActions.goToWhat());
+    },
+    goToPlaces: () => {
+      dispatch(NavigationActions.goToPlaces());
     },
   };
 }

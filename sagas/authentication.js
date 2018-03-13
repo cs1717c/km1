@@ -35,11 +35,35 @@ function * watchLoginRequest() {
   yield takeEvery(AuthenticationActionTypes.LOGIN, loginSaga);
 }
 
-function* loginSaga (payload) {
+function* loginSaga(payload) {
   yield put(showSpinner());
 
   try {
     const loggedInResponse = yield call(login, payload);
+
+    console.log('login saga');
+    console.log(loggedInResponse);
+
+    yield put(loginSuccess(loggedInResponse));
+    yield Actions.home();
+  } catch (e) {
+    const response = JSON.parse(e._bodyText);
+    yield put(showErrorModal(response.message));
+  }
+
+  yield put(hideSpinner());  
+}
+
+function * watchFbLoginRequest() {
+  yield takeEvery(AuthenticationActionTypes.FB_LOGIN, fbLoginSaga);
+}
+
+function* fbLoginSaga(payload) {
+  yield put(showSpinner());
+
+  try {
+    const loggedInResponse = { ...payload };
+
     yield put(loginSuccess(loggedInResponse));
     yield Actions.home();
   } catch (e) {
@@ -53,4 +77,5 @@ function* loginSaga (payload) {
 export default function* root() {
   yield fork(watchRegisterRequest);
   yield fork(watchLoginRequest);
+  yield fork(watchFbLoginRequest);
 }

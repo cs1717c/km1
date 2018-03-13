@@ -57,10 +57,10 @@ class EnRoute extends Component {
           <KmButton style={styles.mapButton}>directions</KmButton>
           <KmButton style={styles.checkInButton}>i'm here</KmButton>
         </View>
-          <KmScrollView ref="scrollView" style={styles.chatLog} scrollStyle={styles.chatLogScroll} inverted>
+        <KmScrollView nogradient ref="scrollView" style={styles.chatLog} scrollStyle={styles.chatLogScroll} inverted>
           { messageRows }
         </KmScrollView> 
-          <View style={styles.chatFieldContainer}>
+        <View style={styles.chatFieldContainer}>
           <KmInput 
             style={styles.chat}
             inputStyle={styles.chatInput}
@@ -84,6 +84,7 @@ const styles = {
     padding: 15,
     paddingBottom: 10,  
     width: '100%',
+    // borderBottomWidth: 1,
   },
 
   header: {
@@ -104,6 +105,8 @@ const styles = {
     padding: 15,
     paddingTop: 0,
     zIndex: 150,
+    borderBottomColor: 'rgba(255,255,255,0.5)',
+    borderBottomWidth: 1,
   },
 
   checkInText: {
@@ -117,8 +120,9 @@ const styles = {
   chatLog: {
     // borderTopWidth: 1,
     borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255,255,255,0.5)',
     flexShrink: 1,
-    marginTop: 0,
+    marginTop: 120,
     // borderWidth: 4,
     // borderColor: 'red'
   },
@@ -130,9 +134,9 @@ const styles = {
   },
 
   messagePhoto: {
-    width: 40,
-    height: 40,
-    // borderWidth: 2,
+    width: 50,
+    height: 50,
+    borderWidth: 1,
     borderRadius: 8,
     marginRight: 15
   },

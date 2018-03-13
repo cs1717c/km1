@@ -10,9 +10,19 @@ export const addTag = (tag) => ({
   tag,
 });
 
+export const removeTag = (tag) => ({
+  type: WhatActionTypes.REMOVE_TAG,
+  tag,
+});
+
+export const toggleTag = (tag) => ({
+  type: WhatActionTypes.TOGGLE_TAG,
+  tag,
+});
+
 export const fetchedTags = (tags) => ({
   type: WhatActionTypes.FETCHED_TAGS,
   tags,
 });
 
-export default { fetchedTags, fetchTags, addTag };
+export default { fetchedTags, fetchTags, addTag, toggleTag, removeTag };

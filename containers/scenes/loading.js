@@ -1,18 +1,20 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import { StyleSheet, View, Image, Text } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
 
-import { BgView, KmText, KmButton } from 'Kameo/components';
+import { BgView, KmText } from 'Kameo/components';
 
-class Settings extends Component {
+class Loading extends Component {
   render() {
     return (
       <BgView>
-        <KmButton toggle style={styles.signOutBtn} onPress={Actions.login}>Sign Out</KmButton>
+        <KmText></KmText>
+        <KmText>loading ...</KmText>
       </BgView>
     );
   }
@@ -31,12 +33,7 @@ const styles = {
   },
   link: {
     margin: 30,
-  },
-
-  signOutBtn: {
-    margin: 50,
-    marginTop: 50,
   }
 };
 
-export default Settings;
+export default connect(({rxr}) => ({rxr}))(Loading);

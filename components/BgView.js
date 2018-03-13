@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 
 import {
   StyleSheet,
-  Image,
   ImageBackground,
+  Image,
   View
 } from 'react-native';
 

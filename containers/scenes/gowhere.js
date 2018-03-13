@@ -24,7 +24,7 @@ class GoWhere extends Component {
         <KmText style={styles.header}>3. where</KmText>
 
         <View style={[styles.section, styles.areasSection]}>
-          <KmText style={styles.areasHeader}>Where do you want to go out?</KmText>
+          <KmText style={styles.subHeader}>Where do you want to go out?</KmText>
           <View style={styles.areasBody}>
             {areaButtons}
           </View>
@@ -56,7 +56,7 @@ const styles = {
 
   header: {
     fontSize: 28,
-    marginTop: 20
+    marginTop: 40
   },
 
   section: {
@@ -66,8 +66,8 @@ const styles = {
   },
 
   subHeader: {
-    fontSize: 16,
-    fontWeight: '400'
+    fontSize: 20,
+    fontWeight: '400',
   },
 
   areasHeader: {
@@ -88,9 +88,9 @@ const styles = {
   },
 
   areaBtn: {
-    width: 120,
-    marginHorizontal: 3,
-    marginTop: 18,
+    width: 155,
+    marginHorizontal: 4,
+    marginTop: 24,
     paddingVertical: 7,
     paddingHorizontal: 1,
   },
@@ -99,7 +99,8 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 0
+    marginTop: 0,
+    paddingBottom: 16,
   },
 
   next: {
