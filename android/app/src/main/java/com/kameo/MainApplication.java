@@ -3,10 +3,12 @@ package com.kameo;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.reactnative.photoview.PhotoViewPackage;
-import cl.json.RNSharePackage;
-import com.BV.LinearGradient.LinearGradientPackage;
+import com.reactlibrary.RNGooglePlacePickerPackage;
+import com.arttitude360.reactnative.rngoogleplaces.RNGooglePlacesPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.BV.LinearGradient.LinearGradientPackage;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -27,11 +29,18 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new PhotoViewPackage(),
-            new RNSharePackage(),
+            new RNGooglePlacePickerPackage(),
+            new RNGooglePlacesPackage(),
+            new VectorIconsPackage(),
             new LinearGradientPackage(),
-            new VectorIconsPackage()
+            new FBSDKPackage(),
+            new ReactNativeExceptionHandlerPackage()
       );
+    }
+
+    @Override
+    protected String getJSMainModuleName() {
+      return "index";
     }
   };
 

@@ -2,11 +2,9 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, Text } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
-
-import { Heading, TextInput, Title, Button, Text } from '@shoutem/ui';
 
 class HomeEvent extends Component {
   static navigationOptions = {
@@ -18,13 +16,13 @@ class HomeEvent extends Component {
       <View style={styles.container}>
         <View style={styles.profileBlock}>
           <View style={styles.profileLeft}>
-            <Title
+            <Text
               onPress={() => {
                 Actions.quest();
               }}
             >
               Hello, John
-            </Title>
+            </Text>
             <Text>27 - Male - London</Text>
             <Text>What do you want to do today?</Text>
           </View>
@@ -40,7 +38,7 @@ class HomeEvent extends Component {
         <View style={styles.mainBlock}>
           <View style={styles.mainBlockHeadingRow}>
             <View style={styles.mainBlockHeadingRowLeft}>
-              <Title>Go Out</Title>
+              <Text>Go Out</Text>
             </View>
             <View style={styles.mainBlockHeadingRowRight}>
               <Button styleName="full-width" style={styles.mainBtn}>
@@ -56,7 +54,7 @@ class HomeEvent extends Component {
         <View style={styles.mainBlock}>
           <View style={styles.mainBlockHeadingRow}>
             <View style={styles.mainBlockHeadingRowLeft}>
-              <Title>Meet Here</Title>
+              <Text>Meet Here</Text>
             </View>
             <View style={styles.mainBlockHeadingRowRight}>
               <Button styleName="full-width" style={styles.mainBtn}>
@@ -72,7 +70,7 @@ class HomeEvent extends Component {
         <View style={styles.mainBlock}>
           <View style={styles.mainBlockHeadingRow}>
             <View style={styles.mainBlockHeadingRowLeft}>
-              <Title>Quest</Title>
+              <Text>Quest</Text>
             </View>
             <View style={styles.mainBlockHeadingRowRight}>
               <Button styleName="full-width" style={styles.mainBtn}>
@@ -88,7 +86,7 @@ class HomeEvent extends Component {
         <View style={styles.mainBlock}>
           <View style={styles.mainBlockHeadingRow}>
             <View style={styles.mainBlockHeadingRowLeft}>
-              <Title>#what</Title>
+              <Text>#what</Text>
             </View>
             <View style={styles.mainBlockHeadingRowRight}>
               <Button styleName="full-width" style={styles.mainBtn}>

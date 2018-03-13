@@ -4,5 +4,8 @@ export const goToWhat = () => ({
   type: NavigationActionTypes.GO_TO_WHAT,
 });
 
+export const goToPlaces = () => ({
+  type: NavigationActionTypes.GO_TO_PLACES,
+});
 
-export default { goToWhat };
+export default { goToWhat, goToPlaces };

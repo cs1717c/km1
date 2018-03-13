@@ -11,6 +11,7 @@ import {
     Text,
     View,
     Image,
+    ImageBackground,
 } from 'react-native';
 
 import {
@@ -22,11 +23,11 @@ import MenuItems from './MenuItems';
 
 const CustomMenu = (props) => (
     <View style={styles.drawer}>
-        <Image source={require('../img/bg2.png')} style={styles.backgroundImage} resizeMode={Image.resizeMode.cover} >
+        <ImageBackground source={require('../img/bg2.png')} style={styles.backgroundImage} resizeMode={Image.resizeMode.cover} >
             <View style={styles.container}>
             <MenuItems {...props} />
             </View>
-        </Image>
+        </ImageBackground>
     </View>
 );
 

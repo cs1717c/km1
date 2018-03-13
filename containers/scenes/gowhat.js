@@ -13,7 +13,7 @@ import tags from 'Kameo/utilities/tags';
 class GoWhat extends Component {
   render() {
     const tagText = [];
-    for (const tag of tags.slice(0,20)) {
+    for (const tag of tags.slice(0,10)) {
       tagText.push(<KmText style={styles.tag} key={tag}>#{tag}</KmText>);
     }
 
@@ -69,11 +69,12 @@ const styles = {
     backgroundColor: 'rgba(0,0,0,0.2)',
     margin: -10,
     padding: 10,
-    borderRadius: 8,
+    borderRadius: 20,
+    marginTop: 10,
   },
 
   subHeader: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '400',
     marginTop: 30,
   },
@@ -95,7 +96,8 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 80
+    marginTop: 80,
+    paddingBottom: 16,
   },
 
   next: {
@@ -107,21 +109,22 @@ const styles = {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    margin: 5
+    margin: 5,
   },
 
   tag: {
-    paddingRight: 7,
-    paddingVertical: 7,
+    paddingHorizontal: 7,
+    paddingRight: 0,
+    paddingVertical: 10,
     fontWeight: '400',
-    fontSize: 10,
-    color: 'rgba(255,255,255,0.7)'
+    fontSize: 16,
+    color: 'rgba(255,255,255,01)'
   },
 
   changeBtn: {
     width: 110,
     alignSelf: 'flex-end',
-    marginTop: 40
+    marginTop: -40,
   },
 
 };

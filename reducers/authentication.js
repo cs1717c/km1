@@ -14,6 +14,8 @@ function register(state, payload) {
 
 function loginSuccess(state, payload) {
   const { user, token } = payload.response;
+  
+  user.token = token;
 
   return {  
     ...state,
@@ -29,8 +31,6 @@ export default function reducer(state = initialState, payload = {}) {
     case AuthenticationActionTypes.LOGIN_SUCCESS:
      return loginSuccess(state, payload);
     default:
-      return {
-        ...state,
-      };
+      return state;
   }
 }

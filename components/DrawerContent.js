@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableHighlight, Image } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight, Image, ImageBackground } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 import { BgView } from 'Kameo/components';
@@ -9,7 +9,7 @@ import { NavigationActions } from 'Kameo/actions';
 class DrawerContent extends React.Component {
   render() {
     return (
-      <Image source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
+      <ImageBackground source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
        <TouchableHighlight onPress={Actions.home} style={styles.menuItem}>
           <Text style={styles.menuText}>home</Text>
         </TouchableHighlight>
@@ -25,7 +25,7 @@ class DrawerContent extends React.Component {
         <TouchableHighlight onPress={Actions.connect} style={styles.menuItem}>
           <Text style={styles.menuText}>connect</Text>
         </TouchableHighlight> */}
-        <TouchableHighlight onPress={Actions.places} style={styles.menuItem}>
+        <TouchableHighlight onPress={this.props.goToPlaces} style={styles.menuItem}>
           <Text style={styles.menuText}>places</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={Actions.settings} style={styles.menuItem}>
@@ -34,7 +34,7 @@ class DrawerContent extends React.Component {
         <TouchableHighlight onPress={Actions.help} style={styles.menuItem}>
           <Text style={styles.menuText}>help</Text>
         </TouchableHighlight>
-      </Image>
+      </ImageBackground>
     );
   }
 }
@@ -43,7 +43,7 @@ class DrawerContent extends React.Component {
 const styles = StyleSheet.create({
   menuItem : {
     padding :20,
-    paddingVertical: 25
+    paddingVertical: 35
   },
   menuText:  {
     color: 'rgba(255,255,255,1)',
@@ -74,6 +74,9 @@ function mapDispatchToProps(dispatch) {
   return {
     goToWhat: () => {
       dispatch(NavigationActions.goToWhat());
+    },
+    goToPlaces: () => {
+      dispatch(NavigationActions.goToPlaces());
     },
   };
 }

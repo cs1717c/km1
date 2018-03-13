@@ -18,8 +18,6 @@ export default function reducer(state = initialState, payload = {}) {
     case WhatActionTypes.FETCHED_TAGS:
      return fetchedTags(state, payload);
     default:
-      return {
-        ...state,
-      };
+      return state;
   }
 }

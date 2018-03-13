@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EF1A570F3FCD72C97052FAC9B1C0C0B /* Pods-Kameo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5C95CDF2E37E5E47BF436326765694 /* Pods-Kameo-dummy.m */; };
+		5256F56B21946CC4CCFF9A8355A55FAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A6BEFBD7B6C3935A11E9DA359262A9E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		AD3189A3874F3F6810E1BE675CAD08FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B9865AC9C5C5EBC332ED381AB70D2BDB /* Pods-KameoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B3F74678DBAA4299D6119A824A9704 /* Pods-KameoTests-dummy.m */; };
+		E537119853AEE265B652012F6D2E8999 /* Pods-Kameo-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AA57E95031C6FD6705C6571EFF77E4 /* Pods-Kameo-tvOSTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0191B134E444574B902C2CD06062C649 /* Pods-Kameo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kameo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		07790BD46C0A51AE9AF086D8F62242CC /* GooglePlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlacePicker.framework; path = Frameworks/GooglePlacePicker.framework; sourceTree = "<group>"; };
+		07E1334BF219EC8FEB3103378B8DCECE /* Pods-Kameo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kameo-frameworks.sh"; sourceTree = "<group>"; };
+		084FEA8B005A2DA09637FDA77ABF653C /* Pods-KameoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KameoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		08AD3326022565C405BD4D71A84D7545 /* Pods-Kameo-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kameo-tvOSTests-resources.sh"; sourceTree = "<group>"; };
+		1117A6D1FE68A6F983D560933AF5E265 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		3B7DD89C9F0E126BDE19C5634334820D /* libPods-Kameo-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Kameo-tvOSTests.a"; path = "libPods-Kameo-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D47B641E34F69D891C66D01EA0E46A0 /* Pods-KameoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KameoTests-frameworks.sh"; sourceTree = "<group>"; };
+		5FAAFEBBA480F3C72D972E6BF69CF013 /* Pods-Kameo-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kameo-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		6186C27DC38ED66293168FADA8C86B6C /* Pods-KameoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KameoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		644416F4F68AB0B06452856B0720FF97 /* libPods-KameoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-KameoTests.a"; path = "libPods-KameoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7E8983768659C313A9A482B5BDB7C6D1 /* Pods-Kameo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kameo-resources.sh"; sourceTree = "<group>"; };
+		80AA57E95031C6FD6705C6571EFF77E4 /* Pods-Kameo-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kameo-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		8BCCCA295DEE22197B0C283775AB5A26 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		955D3A22EB34AB333524A949DC729F6B /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		97F843FB0B2E20CB2DDA67005E902BE6 /* Pods-Kameo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kameo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A24C44EE508870F19331014835798450 /* Pods-Kameo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kameo.release.xcconfig"; sourceTree = "<group>"; };
+		A4FC96F28BDCFF8B34D71FEE03C58EF3 /* Pods-Kameo-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kameo-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C3EA3ACCED73A8BD80C6897383897687 /* Pods-KameoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KameoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C770FBCF600E68EB6F913BD872B16623 /* Pods-Kameo-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kameo-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C8B3F74678DBAA4299D6119A824A9704 /* Pods-KameoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KameoTests-dummy.m"; sourceTree = "<group>"; };
+		CA9245AB5B86A5BCD1E0D3BF7079D64B /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		D1DBCD0071D70866EBEFA8E983E0A2FE /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		D63A2EF03409B32D4DFA729AD795BAAD /* Pods-KameoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KameoTests.release.xcconfig"; sourceTree = "<group>"; };
+		D9D3CB4CB0E2470B5B36BAF2C65DB47D /* Pods-Kameo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kameo-acknowledgements.plist"; sourceTree = "<group>"; };
+		DCE38438C925053F9C045DA8B01D436C /* libPods-Kameo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Kameo.a"; path = "libPods-Kameo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD17A99CD250C3A17A98E7C0669087CE /* Pods-Kameo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kameo.debug.xcconfig"; sourceTree = "<group>"; };
+		DE49AA6C213FF10A4CE30B38AB382963 /* Pods-KameoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KameoTests-resources.sh"; sourceTree = "<group>"; };
+		EAB17F2F50C683A01FF0C33D93A20225 /* Pods-Kameo-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kameo-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		ED5C95CDF2E37E5E47BF436326765694 /* Pods-Kameo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kameo-dummy.m"; sourceTree = "<group>"; };
+		F769EDE7CC5A77CDBE3B2309AF3BD5FA /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlacePicker.bundle; path = Frameworks/GooglePlacePicker.framework/Versions/A/Resources/GooglePlacePicker.bundle; sourceTree = "<group>"; };
+		F8567FFA809DD02B36CFB593922A14EA /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		220548F6BF36ADABFCD9969D83BB3789 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6BEFBD7B6C3935A11E9DA359262A9E7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58428E3009379ED4EC7DE0CFE83A99C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3189A3874F3F6810E1BE675CAD08FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		941E000D515D8241B610108EE8C82FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5256F56B21946CC4CCFF9A8355A55FAD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		057612C31241123A1B53E2F8FEE23AB0 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				8BA44F82F96D164DA342FB09A0BEE150 /* Frameworks */,
+				9595338FF99D6E406412D70BB160C308 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		1D4705309FA67A1D19F12A2C12E22874 /* Pods-KameoTests */ = {
+			isa = PBXGroup;
+			children = (
+				084FEA8B005A2DA09637FDA77ABF653C /* Pods-KameoTests-acknowledgements.markdown */,
+				C3EA3ACCED73A8BD80C6897383897687 /* Pods-KameoTests-acknowledgements.plist */,
+				C8B3F74678DBAA4299D6119A824A9704 /* Pods-KameoTests-dummy.m */,
+				5D47B641E34F69D891C66D01EA0E46A0 /* Pods-KameoTests-frameworks.sh */,
+				DE49AA6C213FF10A4CE30B38AB382963 /* Pods-KameoTests-resources.sh */,
+				6186C27DC38ED66293168FADA8C86B6C /* Pods-KameoTests.debug.xcconfig */,
+				D63A2EF03409B32D4DFA729AD795BAAD /* Pods-KameoTests.release.xcconfig */,
+			);
+			name = "Pods-KameoTests";
+			path = "Target Support Files/Pods-KameoTests";
+			sourceTree = "<group>";
+		};
+		24E6408847EA4697EC99A3C22F9B2F8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA9245AB5B86A5BCD1E0D3BF7079D64B /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		45A6375AD18305E8BA7B79AD1BE61E9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BCCCA295DEE22197B0C283775AB5A26 /* GoogleMaps.framework */,
+				1117A6D1FE68A6F983D560933AF5E265 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A999BD5B4C2C01904FC59776164FBE1 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				45A6375AD18305E8BA7B79AD1BE61E9D /* Frameworks */,
+				24E6408847EA4697EC99A3C22F9B2F8E /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C62832EC902B481843EFC870F9D95CC2 /* Pods */,
+				E9AA7EDD8DD4583829BFC18D288A5137 /* Products */,
+				91BE8F549DC011C2072E40D19E54DAF0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7F90F9630601E1A5852CD5218D8544BA /* Pods-Kameo-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAB17F2F50C683A01FF0C33D93A20225 /* Pods-Kameo-tvOSTests-acknowledgements.markdown */,
+				C770FBCF600E68EB6F913BD872B16623 /* Pods-Kameo-tvOSTests-acknowledgements.plist */,
+				80AA57E95031C6FD6705C6571EFF77E4 /* Pods-Kameo-tvOSTests-dummy.m */,
+				5FAAFEBBA480F3C72D972E6BF69CF013 /* Pods-Kameo-tvOSTests-frameworks.sh */,
+				08AD3326022565C405BD4D71A84D7545 /* Pods-Kameo-tvOSTests-resources.sh */,
+				A4FC96F28BDCFF8B34D71FEE03C58EF3 /* Pods-Kameo-tvOSTests.debug.xcconfig */,
+				0191B134E444574B902C2CD06062C649 /* Pods-Kameo-tvOSTests.release.xcconfig */,
+			);
+			name = "Pods-Kameo-tvOSTests";
+			path = "Target Support Files/Pods-Kameo-tvOSTests";
+			sourceTree = "<group>";
+		};
+		81E1DAAC72B0A8AFFA4EF8D132AFC391 /* Pods-Kameo */ = {
+			isa = PBXGroup;
+			children = (
+				97F843FB0B2E20CB2DDA67005E902BE6 /* Pods-Kameo-acknowledgements.markdown */,
+				D9D3CB4CB0E2470B5B36BAF2C65DB47D /* Pods-Kameo-acknowledgements.plist */,
+				ED5C95CDF2E37E5E47BF436326765694 /* Pods-Kameo-dummy.m */,
+				07E1334BF219EC8FEB3103378B8DCECE /* Pods-Kameo-frameworks.sh */,
+				7E8983768659C313A9A482B5BDB7C6D1 /* Pods-Kameo-resources.sh */,
+				DD17A99CD250C3A17A98E7C0669087CE /* Pods-Kameo.debug.xcconfig */,
+				A24C44EE508870F19331014835798450 /* Pods-Kameo.release.xcconfig */,
+			);
+			name = "Pods-Kameo";
+			path = "Target Support Files/Pods-Kameo";
+			sourceTree = "<group>";
+		};
+		8BA44F82F96D164DA342FB09A0BEE150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				955D3A22EB34AB333524A949DC729F6B /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FFA7EAE118844748AD9685060A6B673 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FD4ED290151C28ABCF7A3EA0217355EB /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		91BE8F549DC011C2072E40D19E54DAF0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				81E1DAAC72B0A8AFFA4EF8D132AFC391 /* Pods-Kameo */,
+				7F90F9630601E1A5852CD5218D8544BA /* Pods-Kameo-tvOSTests */,
+				1D4705309FA67A1D19F12A2C12E22874 /* Pods-KameoTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9335B78F64E389AD6BD28E5033911D2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F769EDE7CC5A77CDBE3B2309AF3BD5FA /* GooglePlacePicker.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9595338FF99D6E406412D70BB160C308 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8567FFA809DD02B36CFB593922A14EA /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C0A1FBBD02B7528347BC7FB84DE24F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07790BD46C0A51AE9AF086D8F62242CC /* GooglePlacePicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C62832EC902B481843EFC870F9D95CC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5C0912CEC7444CFF51EFFE502270519 /* GoogleMaps */,
+				CCA175DF4D87459CA14C4E01BCFDEF95 /* GooglePlacePicker */,
+				057612C31241123A1B53E2F8FEE23AB0 /* GooglePlaces */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCA175DF4D87459CA14C4E01BCFDEF95 /* GooglePlacePicker */ = {
+			isa = PBXGroup;
+			children = (
+				9C0A1FBBD02B7528347BC7FB84DE24F5 /* Frameworks */,
+				9335B78F64E389AD6BD28E5033911D2C /* Resources */,
+			);
+			name = GooglePlacePicker;
+			path = GooglePlacePicker;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E5C0912CEC7444CFF51EFFE502270519 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				8FFA7EAE118844748AD9685060A6B673 /* Base */,
+				7A999BD5B4C2C01904FC59776164FBE1 /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		E9AA7EDD8DD4583829BFC18D288A5137 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCE38438C925053F9C045DA8B01D436C /* libPods-Kameo.a */,
+				3B7DD89C9F0E126BDE19C5634334820D /* libPods-Kameo-tvOSTests.a */,
+				644416F4F68AB0B06452856B0720FF97 /* libPods-KameoTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD4ED290151C28ABCF7A3EA0217355EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1DBCD0071D70866EBEFA8E983E0A2FE /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BBD71681B9FB9BA831A5A5EAED0E3EE /* Pods-Kameo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43B41A2C183734FBBEB9E8C6DF588276 /* Build configuration list for PBXNativeTarget "Pods-Kameo" */;
+			buildPhases = (
+				BC6A5D818183BA53FE4C6AAF7F8D1A28 /* Sources */,
+				941E000D515D8241B610108EE8C82FA4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Kameo";
+			productName = "Pods-Kameo";
+			productReference = DCE38438C925053F9C045DA8B01D436C /* libPods-Kameo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A4E3D9956ACBC8B32182F05FA5005D77 /* Pods-KameoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0BBBC9A2E954FC033CB3556EF62A416 /* Build configuration list for PBXNativeTarget "Pods-KameoTests" */;
+			buildPhases = (
+				F8B53425E2D8D38B7D0FA816D9F9DF94 /* Sources */,
+				58428E3009379ED4EC7DE0CFE83A99C9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-KameoTests";
+			productName = "Pods-KameoTests";
+			productReference = 644416F4F68AB0B06452856B0720FF97 /* libPods-KameoTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FAC1C809BDCEED832049A83AE74EA38F /* Pods-Kameo-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCC056F95A68975EB3E2F393A0E3B27D /* Build configuration list for PBXNativeTarget "Pods-Kameo-tvOSTests" */;
+			buildPhases = (
+				28873F77F8F746F15B00F52759D57951 /* Sources */,
+				220548F6BF36ADABFCD9969D83BB3789 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Kameo-tvOSTests";
+			productName = "Pods-Kameo-tvOSTests";
+			productReference = 3B7DD89C9F0E126BDE19C5634334820D /* libPods-Kameo-tvOSTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E9AA7EDD8DD4583829BFC18D288A5137 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BBD71681B9FB9BA831A5A5EAED0E3EE /* Pods-Kameo */,
+				FAC1C809BDCEED832049A83AE74EA38F /* Pods-Kameo-tvOSTests */,
+				A4E3D9956ACBC8B32182F05FA5005D77 /* Pods-KameoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28873F77F8F746F15B00F52759D57951 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E537119853AEE265B652012F6D2E8999 /* Pods-Kameo-tvOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC6A5D818183BA53FE4C6AAF7F8D1A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF1A570F3FCD72C97052FAC9B1C0C0B /* Pods-Kameo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B53425E2D8D38B7D0FA816D9F9DF94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9865AC9C5C5EBC332ED381AB70D2BDB /* Pods-KameoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0050F5E8CC97DDD04239A459CEF71323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6186C27DC38ED66293168FADA8C86B6C /* Pods-KameoTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F2FC8BD6C549250CA89C1E4AC9B866B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD17A99CD250C3A17A98E7C0669087CE /* Pods-Kameo.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DFE3851916FE29D8DE01C83516DAB11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24C44EE508870F19331014835798450 /* Pods-Kameo.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A928C3F444E4CA86B44C0DC61FB8B71D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D63A2EF03409B32D4DFA729AD795BAAD /* Pods-KameoTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C22537EEB8BC1E54D4FF7A24B93401C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0191B134E444574B902C2CD06062C649 /* Pods-Kameo-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C23A485CB290BE5204B8E1BD86FBDB87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4FC96F28BDCFF8B34D71FEE03C58EF3 /* Pods-Kameo-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3E37FB098AE76440E29106ADBF00CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DA03565BE765DB55C6448FB363A44481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3E37FB098AE76440E29106ADBF00CEB /* Debug */,
+				DA03565BE765DB55C6448FB363A44481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43B41A2C183734FBBEB9E8C6DF588276 /* Build configuration list for PBXNativeTarget "Pods-Kameo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F2FC8BD6C549250CA89C1E4AC9B866B /* Debug */,
+				8DFE3851916FE29D8DE01C83516DAB11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0BBBC9A2E954FC033CB3556EF62A416 /* Build configuration list for PBXNativeTarget "Pods-KameoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0050F5E8CC97DDD04239A459CEF71323 /* Debug */,
+				A928C3F444E4CA86B44C0DC61FB8B71D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCC056F95A68975EB3E2F393A0E3B27D /* Build configuration list for PBXNativeTarget "Pods-Kameo-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23A485CB290BE5204B8E1BD86FBDB87 /* Debug */,
+				C22537EEB8BC1E54D4FF7A24B93401C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

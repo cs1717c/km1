@@ -12,7 +12,7 @@ class Settings extends Component {
   render() {
     return (
       <BgView>
-        <KmButton toggle style={styles.goBtn} onPress={Actions.login}>Sign Out</KmButton>
+        <KmButton toggle style={styles.signOutBtn} onPress={Actions.login}>Sign Out</KmButton>
       </BgView>
     );
   }
@@ -31,6 +31,11 @@ const styles = {
   },
   link: {
     margin: 30,
+  },
+
+  signOutBtn: {
+    margin: 50,
+    marginTop: 50,
   }
 };
 

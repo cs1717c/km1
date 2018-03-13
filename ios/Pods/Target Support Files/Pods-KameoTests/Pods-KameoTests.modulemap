@@ -1,0 +1,6 @@
+framework module Pods_KameoTests {
+  umbrella header "Pods-KameoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

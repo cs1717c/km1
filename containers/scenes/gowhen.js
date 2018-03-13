@@ -71,7 +71,7 @@ const styles = {
   },
 
   areasHeader: {
-    fontSize: 18
+    fontSize: 20
   },
 
   areasBody: {
@@ -88,7 +88,7 @@ const styles = {
   },
 
   areaBtn: {
-    width: 70,
+    width: 155,
     marginHorizontal: 5,
     marginTop: 20,
     paddingVertical: 10,
@@ -99,7 +99,8 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 80
+    marginTop: 80,
+    paddingBottom: 16,
   },
 
   next: {

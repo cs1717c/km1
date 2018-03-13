@@ -10,6 +10,8 @@ import { BgView, KmText } from 'Kameo/components';
 
 import { connect } from 'react-redux';
 
+import { NavigationActions } from 'Kameo/actions';
+
 const { bp, vw, vh } = require('react-native-relative-units')(375);
 
 class Home extends Component {
@@ -17,16 +19,16 @@ class Home extends Component {
     return (
       <BgView style={styles.container}>
         <View style={styles.profileContainer}>
-          <Image source={require('Kameo/img/profiles/00.jpg')} style={styles.profile} />
+          <Image source={{ uri: this.props.authentication.user.profile_url }} style={styles.profile} />
           <View style={styles.profileInfo}>
-            <KmText style={styles.profileHeader}>Hello, {this.props.authentication.user.name}</KmText>
-            <KmText style={styles.profileSubHeader}>27 - Male - London</KmText>
+            <KmText style={styles.profileHeader}>Hello, {this.props.authentication.user.first_name}</KmText>
+            <KmText style={styles.profileSubHeader}>Welcome to London!</KmText>
           </View>
         </View>
         <View style={styles.linksContainer}>
 
           <View style={styles.leftLinkContainer}>
-            <TouchableHighlight onPress={Actions.what}>
+            <TouchableHighlight onPress={this.props.goToWhat}>
               <View>
                <KmText style={styles.whatLink}>#what</KmText>
                <View style={styles.linkLine} />
@@ -41,7 +43,7 @@ class Home extends Component {
                 <View style={styles.linkLine} />
               </View>
             </TouchableHighlight>
-            <TouchableHighlight onPress={Actions.goWho}>
+            <TouchableHighlight onPress={Actions.goRequest}>
               <View>
                 <KmText style={styles.goLink}>go</KmText>
                 <View style={styles.linkLine} />
@@ -89,7 +91,7 @@ const styles = {
     marginLeft: 25,
   },
   profileContainer: {
-    marginTop: 45,
+    marginTop: 75,
     marginLeft: 55,
     marginRight: 20,
    flexDirection: 'row',
@@ -100,7 +102,7 @@ const styles = {
   // padding: 20,
   },
   linksContainer: {
-    marginTop: 0,
+    marginTop: 50,
     marginLeft: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -113,7 +115,9 @@ const styles = {
     justifyContent: 'flex-end'
   },
   rightLinkContainer: {
-    paddingTop: 150,
+    marginTop: 180,
+    justifyContent: 'space-between',
+    height: 160,
   },
   whatLink: {
     borderBottomWidth: 1,
@@ -128,7 +132,6 @@ const styles = {
   goLink: {
     fontSize: 50,
     marginRight: 50,
-    marginTop: 50,
   },
   meetHereLink: {
     fontSize: 21  ,    
@@ -143,12 +146,9 @@ function mapStateToProps(store, ownProps) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    // login: (email, password, name) => {
-    //   dispatch(AuthenticationActions.login(email, password, name));
-    // },
-    // showErrorModal: (text) => {
-    //   dispatch(ErrorActions.showErrorModal(text));
-    // }
+    goToWhat: () => {
+      dispatch(NavigationActions.goToWhat());
+    },
   };
 }
 

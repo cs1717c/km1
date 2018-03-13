@@ -1,4 +1,4 @@
-import { View, Image, StatusBar, TouchableWithoutFeedback, TouchableHighlight } from 'react-native';
+import { View, Image, ImageBackground, StatusBar, TouchableWithoutFeedback, TouchableHighlight } from 'react-native';
 import React, { Component } from 'react';
 import { Actions, Router, Scene } from 'react-native-router-flux';
 import { KmText } from 'Kameo/components';
@@ -10,10 +10,10 @@ class KmNavBar extends Component {
         <StatusBar />
         <View style={styles.container}>
           <TouchableWithoutFeedback onPress={() => Actions.home()}>
-            <Image source={require('Kameo/img/logo2.png')} style={styles.logo} resizeMode={Image.resizeMode.cover} />
+            <ImageBackground source={require('Kameo/img/logo2.png')} style={styles.logo} resizeMode={Image.resizeMode.cover} />
           </TouchableWithoutFeedback>
           <TouchableHighlight onPress={() => Actions.drawerOpen()} style={styles.menuContainer}>
-            <Image source={require('Kameo/img/menu2.png')} style={styles.menu} resizeMode={Image.resizeMode.stretch} />
+            <ImageBackground source={require('Kameo/img/menu2.png')} style={styles.menu} resizeMode={Image.resizeMode.stretch} />
           </TouchableHighlight>
         </View>
       </View>

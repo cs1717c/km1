@@ -84,7 +84,8 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 80
+    marginTop: 80,
+    paddingBottom: 16,
   },
 
   next: {

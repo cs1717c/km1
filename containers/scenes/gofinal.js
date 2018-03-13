@@ -168,6 +168,7 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 40,
+    paddingBottom: 16,
   },
 
   next: {

@@ -1,6 +1,6 @@
 export const environments = {
-	dev: 'http://localhost:5000/api',
-	test: 'https://kmapi2.herokuapp.com/api'
+	dev: 'http://localhost:5000',
+	test: 'https://kmapi2.herokuapp.com',
 };
 
 export default {

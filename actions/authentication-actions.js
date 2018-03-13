@@ -13,10 +13,16 @@ export const login = (email, password) => ({
   password,
 });
 
+export const fbLogin = (user, token) => ({
+  type: AuthenticationActionTypes.FB_LOGIN,
+  user,
+  token,
+});
+
 
 export const loginSuccess = (response) => ({
   type: AuthenticationActionTypes.LOGIN_SUCCESS,
   response,
 });
 
-export default { register, login };
+export default { register, login, fbLogin };
