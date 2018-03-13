@@ -8,8 +8,6 @@ import { createStore } from 'redux';
 
 import { Router, Stack, Scene, Drawer } from 'react-native-router-flux';
 
-import CardStackStyleInterpolator from 'react-navigation/src/views/CardStackStyleInterpolator';
-
 import { BgView, KmNavBar } from 'Kameo/components';
 
 

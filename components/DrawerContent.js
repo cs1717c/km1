@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableHighlight, Image } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight, Image, ImageBackground } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 import { BgView } from 'Kameo/components';
@@ -9,7 +9,7 @@ import { NavigationActions } from 'Kameo/actions';
 class DrawerContent extends React.Component {
   render() {
     return (
-      <Image source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
+      <ImageBackground source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
        <TouchableHighlight onPress={Actions.home} style={styles.menuItem}>
           <Text style={styles.menuText}>home</Text>
         </TouchableHighlight>
@@ -34,7 +34,7 @@ class DrawerContent extends React.Component {
         <TouchableHighlight onPress={Actions.help} style={styles.menuItem}>
           <Text style={styles.menuText}>help</Text>
         </TouchableHighlight>
-      </Image>
+      </ImageBackground>
     );
   }
 }

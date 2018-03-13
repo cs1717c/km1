@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Image,
+  ImageBackground,
   View
 } from 'react-native';
 
@@ -15,14 +16,14 @@ class BgView extends Component {
 
     if (isDark) {
       return (
-      <Image source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
+      <ImageBackground source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.cover}>
       {this.props.children}
-      </Image>);
+      </ImageBackground>);
     } else {
       return  (
-      <Image source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.stretch}>
+      <ImageBackground source={require('Kameo/img/bg5.png')} style={[styles.backgroundImage, this.props.style]} resizeMode={Image.resizeMode.stretch}>
       {this.props.children}
-      </Image>); 
+      </ImageBackground>); 
     }
   }
 }
