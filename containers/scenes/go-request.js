@@ -69,7 +69,7 @@ class GoRequest extends Component {
         <View style={styles.goNextWrapper}>
           <TouchableHighlight>
             <Text style={styles.goNextText}>
-             <myIcon />
+             {/* <myIcon /> */}
             </Text>
           </TouchableHighlight>
         </View>

@@ -14,6 +14,9 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
+@import GooglePlaces;
+@import GoogleMaps;
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -22,6 +25,9 @@
                            didFinishLaunchingWithOptions:launchOptions];
   
   NSURL *jsCodeLocation;
+  
+  [GMSPlacesClient provideAPIKey:@"AIzaSyBZAnaOfmskpRRfuGgt1snTEkX3pSCXmzI"];
+  [GMSServices provideAPIKey:@"AIzaSyBZAnaOfmskpRRfuGgt1snTEkX3pSCXmzI"];
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
 

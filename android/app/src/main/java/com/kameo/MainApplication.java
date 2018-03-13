@@ -3,6 +3,7 @@ package com.kameo;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 import com.arttitude360.reactnative.rngoogleplaces.RNGooglePlacesPackage;
 import com.reactnative.photoview.PhotoViewPackage;
 import cl.json.RNSharePackage;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactNativeExceptionHandlerPackage(),
             new RNGooglePlacesPackage(),
             new PhotoViewPackage(),
             new RNSharePackage(),

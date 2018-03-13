@@ -9,7 +9,6 @@ import sagas from 'Kameo/sagas';
 import createSagaMiddleware from 'redux-saga';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 
-
 export const persistConfig = {
   key: 'km',
   storage,
@@ -20,8 +19,6 @@ export const persistConfig = {
 const configureStore = (initialState) => {
   const sagaMiddleware = createSagaMiddleware();
   
-  const rootReducer =  require('../reducers/index').default;
-
   console.log('reducers');
   console.log(reducers);
 

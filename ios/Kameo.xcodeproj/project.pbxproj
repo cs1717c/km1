@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -38,6 +39,7 @@
 		3A4C7873298A477F87E35D53 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A30E517155B4DED8ECF11F4 /* Zocial.ttf */; };
 		3EA5D819EF4C4326B9860B14 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0552413E9264CAE9C2A1DA5 /* Octicons.ttf */; };
 		46767402448F4306AC4270B8 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		4787EB66C58447F5B8138BD9 /* libReactNativeExceptionHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AE7EC75CEF4E83A3FE1D9F /* libReactNativeExceptionHandler.a */; };
 		4BBAB1979CD948998305EDD2 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		51758BBDBA714953871A89DE /* (null) in Resources */ = {isa = PBXBuildFile; };
 		5385B74F573042CCB14A6B05 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04473D8BEFC14BFEA68654AA /* SimpleLineIcons.ttf */; };
@@ -53,16 +55,18 @@
 		A4DDA8C33AFB4143AFA01507 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFEEAFF691DF4C3AB48DB6FE /* Ionicons.ttf */; };
 		A616A0B82382402093665033 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		B448A5871FDC597900CF6789 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B448A5861FDC597900CF6789 /* Default-568h@2x.png */; };
+		B46C6601205858460083EBA5 /* libSafariViewManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B46C6600205857170083EBA5 /* libSafariViewManager.a */; };
 		B4835B762058491900BEDBC9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4835B722058491700BEDBC9 /* FBSDKLoginKit.framework */; };
 		B4835B772058491900BEDBC9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4835B732058491700BEDBC9 /* Bolts.framework */; };
 		B4835B782058491900BEDBC9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4835B742058491800BEDBC9 /* FBSDKShareKit.framework */; };
 		B4835B792058491900BEDBC9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4835B752058491900BEDBC9 /* FBSDKCoreKit.framework */; };
+		B6377BB5FA3BC5B62DF49BE9 /* libPods-Kameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C1F506B11FB717991C099 /* libPods-Kameo.a */; };
 		B9DF3D9AD8B14357B7B8EE3E /* (null) in Resources */ = {isa = PBXBuildFile; };
 		BFE1847E83E347AA8FCF2A05 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0A059B2AC1F42278DE41222 /* MaterialIcons.ttf */; };
 		C1CF2EC998B84106917EB00E /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D87466BBA6F45C2BC03E0BE /* FontAwesome.ttf */; };
+		CB962AABD39A4477BA160A8C /* libRNGooglePlaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694240C40CB14E6E9D1B632F /* libRNGooglePlaces.a */; };
 		D69053E3D4CA4FD587C0C24F /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 468073A6501E4E2DB3405EF3 /* Feather.ttf */; };
 		F0F0A2F5D3854E4C83BC7167 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9682EE409AE249CF97D5F402 /* libRNVectorIcons.a */; };
-		CB962AABD39A4477BA160A8C /* libRNGooglePlaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694240C40CB14E6E9D1B632F /* libRNGooglePlaces.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +280,20 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNShare;
 		};
+		B46C65ED205856060083EBA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D756F49FBA3247229449169A /* ReactNativeExceptionHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = ReactNativeExceptionHandler;
+		};
+		B46C65FF205857170083EBA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B46C65FB205857170083EBA5 /* SafariViewManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = SafariViewManager;
+		};
 		B4835B4B205848E900BEDBC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
@@ -346,6 +364,13 @@
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
 		};
+		B4835BB22058502B00BEDBC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 999ABF9D4EF14269A0D78CC4 /* RNGooglePlaces.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGooglePlaces;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -376,25 +401,31 @@
 		47500580422143F993854B9A /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
 		5678481B0C37425F8656BE48 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		694240C40CB14E6E9D1B632F /* libRNGooglePlaces.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGooglePlaces.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		858E969DE3064812872FDD48 /* RNShare.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNShare.xcodeproj; path = "../node_modules/react-native-share/ios/RNShare.xcodeproj"; sourceTree = "<group>"; };
 		8C3854E4BBE34A5C8AC4B1CD /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		9682EE409AE249CF97D5F402 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		979C1F506B11FB717991C099 /* libPods-Kameo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kameo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		999ABF9D4EF14269A0D78CC4 /* RNGooglePlaces.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGooglePlaces.xcodeproj; path = "../node_modules/react-native-google-places/ios/RNGooglePlaces.xcodeproj"; sourceTree = "<group>"; };
 		9A30E517155B4DED8ECF11F4 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		A041E7B76615431FA1304D3C /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		A0552413E9264CAE9C2A1DA5 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		A9B562B9F93B480D877FD91E /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		B448A5861FDC597900CF6789 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B46C65FB205857170083EBA5 /* SafariViewManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SafariViewManager.xcodeproj; path = "../node_modules/react-native-safari-view/SafariViewManager.xcodeproj"; sourceTree = "<group>"; };
 		B4835B722058491700BEDBC9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B4835B732058491700BEDBC9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B4835B742058491800BEDBC9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		B4835B752058491900BEDBC9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B543ACA74B2F454D810B2B0D /* libRNShare.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNShare.a; sourceTree = "<group>"; };
 		C0A059B2AC1F42278DE41222 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		C0AE7EC75CEF4E83A3FE1D9F /* libReactNativeExceptionHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeExceptionHandler.a; sourceTree = "<group>"; };
+		C99FA7EA43B1829BA915A278 /* Pods-Kameo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kameo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kameo/Pods-Kameo.debug.xcconfig"; sourceTree = "<group>"; };
+		D756F49FBA3247229449169A /* ReactNativeExceptionHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeExceptionHandler.xcodeproj; path = "../node_modules/react-native-exception-handler/ios/ReactNativeExceptionHandler.xcodeproj"; sourceTree = "<group>"; };
+		E516777EA3326A69F0699819 /* Pods-Kameo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kameo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kameo/Pods-Kameo.release.xcconfig"; sourceTree = "<group>"; };
 		EFEEAFF691DF4C3AB48DB6FE /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		999ABF9D4EF14269A0D78CC4 /* RNGooglePlaces.xcodeproj */ = {isa = PBXFileReference; name = "RNGooglePlaces.xcodeproj"; path = "../node_modules/react-native-google-places/ios/RNGooglePlaces.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		694240C40CB14E6E9D1B632F /* libRNGooglePlaces.a */ = {isa = PBXFileReference; name = "libRNGooglePlaces.a"; path = "libRNGooglePlaces.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,8 +450,11 @@
 				F0F0A2F5D3854E4C83BC7167 /* libRNVectorIcons.a in Frameworks */,
 				263945501601441390CC4F33 /* libBVLinearGradient.a in Frameworks */,
 				2620C3D43AA7454FA84B6703 /* libRNShare.a in Frameworks */,
+				B46C6601205858460083EBA5 /* libSafariViewManager.a in Frameworks */,
 				B4835B772058491900BEDBC9 /* Bolts.framework in Frameworks */,
 				CB962AABD39A4477BA160A8C /* libRNGooglePlaces.a in Frameworks */,
+				B6377BB5FA3BC5B62DF49BE9 /* libPods-Kameo.a in Frameworks */,
+				4787EB66C58447F5B8138BD9 /* libReactNativeExceptionHandler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +598,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3B3F94430D7CEEF851439A41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C99FA7EA43B1829BA915A278 /* Pods-Kameo.debug.xcconfig */,
+				E516777EA3326A69F0699819 /* Pods-Kameo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4DB7D5F8A417441A936B07B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,6 +646,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B46C65FB205857170083EBA5 /* SafariViewManager.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -618,6 +662,7 @@
 				163B27246F4E4B129893F20E /* BVLinearGradient.xcodeproj */,
 				858E969DE3064812872FDD48 /* RNShare.xcodeproj */,
 				999ABF9D4EF14269A0D78CC4 /* RNGooglePlaces.xcodeproj */,
+				D756F49FBA3247229449169A /* ReactNativeExceptionHandler.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -642,6 +687,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				4DB7D5F8A417441A936B07B6 /* Resources */,
 				B4389A371F6910530017205B /* Recovered References */,
+				3B3F94430D7CEEF851439A41 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -663,6 +709,8 @@
 				9682EE409AE249CF97D5F402 /* libRNVectorIcons.a */,
 				47500580422143F993854B9A /* libBVLinearGradient.a */,
 				B543ACA74B2F454D810B2B0D /* libRNShare.a */,
+				694240C40CB14E6E9D1B632F /* libRNGooglePlaces.a */,
+				C0AE7EC75CEF4E83A3FE1D9F /* libReactNativeExceptionHandler.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -692,6 +740,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B46C65EA205856060083EBA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B46C65EE205856060083EBA5 /* libReactNativeExceptionHandler.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B46C65FC205857170083EBA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B46C6600205857170083EBA5 /* libSafariViewManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B4835B71205848F400BEDBC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,8 +763,17 @@
 				B4835B752058491900BEDBC9 /* FBSDKCoreKit.framework */,
 				B4835B722058491700BEDBC9 /* FBSDKLoginKit.framework */,
 				B4835B742058491800BEDBC9 /* FBSDKShareKit.framework */,
+				979C1F506B11FB717991C099 /* libPods-Kameo.a */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4835BAF2058502B00BEDBC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4835BB32058502B00BEDBC9 /* libRNGooglePlaces.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -710,10 +783,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Kameo" */;
 			buildPhases = (
+				25087F7826AECCFEFA2473F1 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				F24A2CFE08514939918A4026 /* [CP] Embed Pods Frameworks */,
+				11B86C3D8190887A41925700 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -845,12 +921,24 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = B46C65EA205856060083EBA5 /* Products */;
+					ProjectRef = D756F49FBA3247229449169A /* ReactNativeExceptionHandler.xcodeproj */;
+				},
+				{
+					ProductGroup = B4835BAF2058502B00BEDBC9 /* Products */;
+					ProjectRef = 999ABF9D4EF14269A0D78CC4 /* RNGooglePlaces.xcodeproj */;
+				},
+				{
 					ProductGroup = B45482061F8AE88700DB2F11 /* Products */;
 					ProjectRef = 858E969DE3064812872FDD48 /* RNShare.xcodeproj */;
 				},
 				{
 					ProductGroup = B4389A511F6910540017205B /* Products */;
 					ProjectRef = A041E7B76615431FA1304D3C /* RNVectorIcons.xcodeproj */;
+				},
+				{
+					ProductGroup = B46C65FC205857170083EBA5 /* Products */;
+					ProjectRef = B46C65FB205857170083EBA5 /* SafariViewManager.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1066,6 +1154,20 @@
 			remoteRef = B454820E1F8AE88700DB2F11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		B46C65EE205856060083EBA5 /* libReactNativeExceptionHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeExceptionHandler.a;
+			remoteRef = B46C65ED205856060083EBA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B46C6600205857170083EBA5 /* libSafariViewManager.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSafariViewManager.a;
+			remoteRef = B46C65FF205857170083EBA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		B4835B4C205848E900BEDBC9 /* libfishhook.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1136,6 +1238,13 @@
 			remoteRef = B4835B6D205848E900BEDBC9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		B4835BB32058502B00BEDBC9 /* libRNGooglePlaces.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGooglePlaces.a;
+			remoteRef = B4835BB22058502B00BEDBC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1202,6 +1311,46 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		11B86C3D8190887A41925700 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kameo/Pods-Kameo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Versions/A/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kameo/Pods-Kameo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25087F7826AECCFEFA2473F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kameo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1215,6 +1364,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		F24A2CFE08514939918A4026 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kameo/Pods-Kameo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1258,6 +1422,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99FA7EA43B1829BA915A278 /* Pods-Kameo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1269,6 +1434,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/../node_modules/react-native-google-places/ios",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1276,12 +1442,15 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-share/ios",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-safari-view",
+					"$(SRCROOT)/../node_modules/react-native-exception-handler/ios",
 				);
 				INFOPLIST_FILE = Kameo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/Kameo\"",
 					"\"$(SRCROOT)/Kameo\"",
 					"\"$(SRCROOT)/Kameo\"",
 					"\"$(SRCROOT)/Kameo\"",
@@ -1302,6 +1471,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E516777EA3326A69F0699819 /* Pods-Kameo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -1312,6 +1482,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/../node_modules/react-native-google-places",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1319,12 +1490,15 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-share/ios",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-safari-view",
+					"$(SRCROOT)/../node_modules/react-native-exception-handler/ios",
 				);
 				INFOPLIST_FILE = Kameo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/Kameo\"",
 					"\"$(SRCROOT)/Kameo\"",
 					"\"$(SRCROOT)/Kameo\"",
 					"\"$(SRCROOT)/Kameo\"",
@@ -1361,6 +1535,7 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-share/ios",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-exception-handler/ios",
 				);
 				INFOPLIST_FILE = "Kameo-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1394,6 +1569,7 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-share/ios",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-exception-handler/ios",
 				);
 				INFOPLIST_FILE = "Kameo-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

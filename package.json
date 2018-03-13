@@ -24,6 +24,7 @@
     "react-native-relative-units": "0.0.4",
     "react-native-router-flux": "^4.0.0-beta.28",
     "react-native-safari-view": "^2.1.0",
+    "react-native-swipe-gestures": "^1.0.2",
     "react-native-vector-icons": "^4.3.0",
     "react-native-viewport-units": "0.0.5",
     "react-navigation": "^1.0.0-beta.11",
