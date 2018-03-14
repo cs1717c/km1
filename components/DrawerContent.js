@@ -42,13 +42,13 @@ class DrawerContent extends React.Component {
 
 const styles = StyleSheet.create({
   menuItem : {
-    padding :20,
-    paddingVertical: 35
+    padding: 20,
+    paddingVertical: 26
   },
   menuText:  {
     color: 'rgba(255,255,255,1)',
     fontFamily: 'Avenir Next',
-    fontSize: 22,
+    fontSize: 20,
     textAlign: 'right'
   },
   backgroundImage: {

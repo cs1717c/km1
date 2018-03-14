@@ -18,6 +18,7 @@ class Home extends Component {
   render() {
     return (
       <BgView style={styles.container}>
+
         <View style={styles.profileContainer}>
           <Image source={{ uri: this.props.authentication.user.profile_url }} style={styles.profile} />
           <View style={styles.profileInfo}>
@@ -25,6 +26,7 @@ class Home extends Component {
             <KmText style={styles.profileSubHeader}>Welcome to London!</KmText>
           </View>
         </View>
+
         <View style={styles.linksContainer}>
 
           <View style={styles.leftLinkContainer}>
@@ -52,6 +54,7 @@ class Home extends Component {
           </View>
 
         </View>
+
       </BgView>
     );
   }
@@ -63,6 +66,7 @@ const styles = {
     flexDirection: 'column',
     // borderWidth: 2,
     borderColor: 'red',
+    justifyContent: 'space-between',
   },
   link: {
     fontSize: 36,
@@ -70,8 +74,8 @@ const styles = {
     padding: 25,
   },
   profile: {
-    width: 57,
-    height: 56,
+    width: 50,
+    height: 50,
     borderWidth: 2,
     borderRadius: 8,
     borderColor: 'rgba(0,0,0,1)'
@@ -80,18 +84,18 @@ const styles = {
     marginLeft: 30
   },
   profileHeader: {
-    fontSize: 19
+    fontSize: 16
   },
   profileSubHeader: {
     marginTop: 7,
-    fontSize: 14,
+    fontSize: 12,
   },
   profileLink: {
     fontSize: 40,
     marginLeft: 25,
   },
   profileContainer: {
-    marginTop: 75,
+    marginTop: 55,
     marginLeft: 55,
     marginRight: 20,
    flexDirection: 'row',
@@ -102,7 +106,7 @@ const styles = {
   // padding: 20,
   },
   linksContainer: {
-    marginTop: 50,
+    // marginTop: 50,
     marginLeft: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -110,31 +114,32 @@ const styles = {
     alignItems: 'flex-start',
   },
   leftLinkContainer: {
-    marginTop: 70,
+    // marginTop: 70,
     width: 110,
     justifyContent: 'flex-end'
   },
   rightLinkContainer: {
-    marginTop: 180,
+    marginTop: 80,
+    marginBottom: 80,
     justifyContent: 'space-between',
-    height: 160,
+    height: 140,
   },
   whatLink: {
     borderBottomWidth: 1,
     borderBottomColor: 'white',
     textAlign: 'right',
-    fontSize: 21,
+    fontSize: 18,
   },
   linkLine: {
     height: 2,
     backgroundColor: 'rgba(255,255,255,.33)'
   },
   goLink: {
-    fontSize: 50,
+    fontSize: 45,
     marginRight: 50,
   },
   meetHereLink: {
-    fontSize: 21  ,    
+    fontSize: 18,    
   }
 };
 

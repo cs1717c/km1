@@ -22,10 +22,11 @@ const configureStore = (initialState) => {
   console.log('reducers');
   console.log(reducers);
 
-  const persistedReducer = persistCombineReducers(persistConfig, reducers);
+  // const persistedReducer = persistCombineReducers(persistConfig, reducers);
 
   const store = createStore(
-    persistedReducer,
+    combineReducers(reducers),
+    //persistedReducer,
     // rootReducer,
     applyMiddleware(sagaMiddleware),
   );  
@@ -39,10 +40,10 @@ const configureStore = (initialState) => {
 
   sagaMiddleware.run(sagas);  
 
-  const persistor = persistStore(store);
+//  const persistor = persistStore(store);
 
-  return { persistor, store };
-  // return { store };
+  // return { persistor, store };
+   return { store };
 };
 
 export default configureStore;

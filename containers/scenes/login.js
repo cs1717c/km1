@@ -53,8 +53,12 @@ class Login extends Component {
 
     // Add event listener to handle OAuthLogin:// URLs
     Linking.addEventListener('url', this.handleOpenURL);
+    console.log('event listener added');
+
     // Launched from an external URL
     Linking.getInitialURL().then((url) => {
+      console.log('wtf');
+      console.log(url);
       if (url) {
         this.handleOpenURL({ url });
       }
@@ -73,6 +77,9 @@ class Login extends Component {
   }
 
   handleOpenURL = ({ url }) => {    
+    console.log('handle open url login');
+    console.log(url);
+    
     // Extract stringified user string out of the URL
     const [, response] = url.match(/response=([^#]+)/);
 
@@ -93,17 +100,15 @@ class Login extends Component {
   };
 
   // Handle Login with Facebook button tap
-  loginWithFacebook = () => this.openURL(`${config.url}/auth/facebook`);
-
-  // Handle Login with Google button tap
-  loginWithGoogle = () => this.openURL(`${config.url}/auth/google`);
+  loginWithFacebook = () => console.log('loginwithfb') || this.openURL(`${config.url}/auth/facebook`);
 
   // Open URL in a browser
   openURL = (url) => {
+    console.log('opening url');
     // Use SafariView on iOS
     if (Platform.OS === 'ios') {
       SafariView.show({
-        url,
+        url: url,
         fromBottom: true,
       });
     }
@@ -112,7 +117,6 @@ class Login extends Component {
       Linking.openURL(url);
     }
   };
-
 
 
   // fbAuth() {
@@ -133,22 +137,6 @@ class Login extends Component {
   //   );
   // }
 
-  loginWithFacebook = () => this.openURL(`${config.url}/auth/facebook`);
-
-  // Open URL in a browser
-  openURL = (url) => {
-    // Use SafariView on iOS
-    if (Platform.OS === 'ios') {
-      SafariView.show({
-        url: url,
-        fromBottom: true,
-      });
-    }
-    // Or Linking.openURL on Android
-    else {
-      Linking.openURL(url);
-    }
-  };
 
   render() {
     return (
@@ -210,15 +198,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    padding: 40,
+    padding: 30,
     flexDirection: 'column'
   },
 
   logo: {
     // fontSize: 24,
     // fontWeight: '300',
-    marginBottom: 0,
-    marginTop: 40,
+    marginBottom: 30,
+    marginTop: 0,
     width: 130,
     // fontFamily: 'Avenir Next',        
     // backgroundColor: 'rgba(0,0,0,0)',
@@ -226,7 +214,7 @@ const styles = StyleSheet.create({
   },
   
   inputContainer: {
-    marginTop: 70,
+    marginTop: 30,
     marginBottom: 30,
   },
 

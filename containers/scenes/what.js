@@ -198,7 +198,7 @@ const styles = {
   },
 
   searchInput: {
-    fontSize: 20,
+    fontSize: 17,
     height: 45,
     // borderWidth: 2,
   },
@@ -225,7 +225,7 @@ const styles = {
     alignItems: 'center',
     // marginVertical: 10,
     backgroundColor: 'rgba(0,0,0,0.6)',
-    padding: 10,
+    padding: 8,
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.1)',
     borderRadius: 4,
@@ -260,7 +260,7 @@ const styles = {
   },
 
   selectedTag: {
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: '600',
     color: 'rgba(255,255,255,0.7)'
   },
@@ -271,7 +271,7 @@ const styles = {
   },
 
   tag: {
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: '400',
     color: 'rgba(255,255,255,0.7)'
   },
@@ -294,12 +294,13 @@ const styles = {
   },
 
   modalButton: {
-    margin: 20,
+    margin: 5,
+    marginHorizontal: 20,
   },
 
   subscriberWrapper: {
-    width: 30,
-    height: 30,
+    width: 24,
+    height: 24,
     borderRadius: 20,
     backgroundColor: 'rgba(255,255,255,0.1)',
     justifyContent: 'center',
@@ -309,7 +310,7 @@ const styles = {
   subscriberCount: {
     marginTop: 2, 
     color: 'rgba(255,255,255,0.75)',
-    fontSize: 18,
+    fontSize: 16,
   },
 
   footer: {

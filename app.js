@@ -84,14 +84,13 @@ export const store = configureStore();
 
 class App extends Component {
   componentWillMount = () => {
-    // store.persistor.pause();
+    // store.persistor.purge();
   }
  
-
   render() {
     return (
       <Provider store={store.store}>
-        <PersistGate loading={<Loading />} persistor={store.persistor}>
+        {/* <PersistGate loading={<Loading />} persistor={store.persistor}> */}
           <RouterWithRedux getSceneStyle={getSceneStyle} transitionConfig={() => ({ screenInterpolator: crossFade })} >
           <Stack key="root" transitionConfig={() => ({ screenInterpolator: crossFade })} >
               <Scene key="login" component={Login} title="Sign In" hideNavBar />
@@ -128,7 +127,7 @@ class App extends Component {
               </Drawer>
             </Stack>
           </RouterWithRedux>
-        </PersistGate>
+        {/* </PersistGate> */}
       </Provider>
     );
   }

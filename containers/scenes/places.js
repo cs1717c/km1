@@ -184,7 +184,8 @@ const styles = {
   },
 
   modalButton: {
-    margin: 20,
+    margin: 5,
+    marginHorizontal: 20,
   },
 
   scrollGradient: {
