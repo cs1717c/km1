@@ -149,28 +149,33 @@ class Login extends Component {
 
             <Image source={require('Kameo/img/logo2.png')} style={styles.logo} resizeMode={Image.resizeMode.contain} />
 
-            <KmInput
-              onChangeText={text => this.setState({ email: text })}
-              placeholder="Email"
-              placeholderTextColor="rgba(255,255,255,0.5)"
-              autoCapitalize="none"
-              style={styles.inputContainer}
-            />
+            <View style={styles.inputContainer}>
 
-            <KmInput
-              onChangeText={text => this.setState({ password: text })}
-              placeholder="Password"
-              secureTextEntry
-              placeholderTextColor="rgba(255,255,255,0.5)"
-            />
+              <KmInput
+                onChangeText={text => this.setState({ email: text })}
+                placeholder="Email"
+                placeholderTextColor="rgba(255,255,255,0.5)"
+                autoCapitalize="none"
+                style={styles.input}
+              />
 
-            <KmButton
-              underlayColor="rgba(255,255,255,0.3)"
-              onPress={this.onPressLogin.bind(this)}
-              style={styles.signInButton}
-            >
-  Sign In
-            </KmButton>
+              <KmInput
+                onChangeText={text => this.setState({ password: text })}
+                placeholder="Password"
+                secureTextEntry
+                placeholderTextColor="rgba(255,255,255,0.5)"
+                style={styles.input}
+              />
+              
+              <KmButton
+                underlayColor="rgba(255,255,255,0.3)"
+                onPress={this.onPressLogin.bind(this)}
+                style={styles.signInButton}
+              >
+    Sign In
+              </KmButton>
+
+            </View>
 
             <KmText style={styles.registerLink} onPress={goToRegister}>
               Register
@@ -207,28 +212,33 @@ const styles = StyleSheet.create({
     // fontWeight: '300',
     marginBottom: 30,
     marginTop: 0,
-    width: 130,
+    width: 100,
     // fontFamily: 'Avenir Next',        
     // backgroundColor: 'rgba(0,0,0,0)',
     // color: 'rgba(255,255,255,1)'
   },
   
   inputContainer: {
-    marginTop: 30,
+    marginTop: 0,
     marginBottom: 30,
+    marginHorizontal: 50,
+    flexGrow: 1,
+    width: '100%',
+    alignItems: 'center',
   },
 
   input: {
-    fontSize: 18
+    fontSize: 16,
+    marginTop: 20,
   },
 
   signInButton: {
-    marginTop: 55,
+    marginTop: 40,
     width: '70%',
   },
 
   registerLink: {
-    marginTop:30,
+    marginTop: 0,
   },
 
   signInWithFacebookButton: {

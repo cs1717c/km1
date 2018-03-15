@@ -23,15 +23,15 @@ const styles = StyleSheet.create({
   button: {
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.6)',
-    borderRadius: 10,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    borderRadius: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
     backgroundColor: 'rgba(255,255,255,0.3)'
   },
   text: {
     color: 'rgba(255,255,255,1)',
     textAlign: 'center',    
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '500',
     fontFamily: 'Avenir Next',    
   }
